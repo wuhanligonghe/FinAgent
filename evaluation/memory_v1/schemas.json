@@ -1,0 +1,599 @@
+{
+  "memory": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "pattern": "^mem_[a-f0-9]{32}$",
+        "title": "Id",
+        "type": "string"
+      },
+      "case_id": {
+        "title": "Case Id",
+        "type": "string"
+      },
+      "description": {
+        "maxLength": 300,
+        "minLength": 1,
+        "title": "Description",
+        "type": "string"
+      },
+      "body": {
+        "maxLength": 4000,
+        "minLength": 1,
+        "title": "Body",
+        "type": "string"
+      },
+      "type": {
+        "enum": [
+          "user",
+          "feedback",
+          "project",
+          "reference"
+        ],
+        "title": "Type",
+        "type": "string"
+      },
+      "user_id": {
+        "title": "User Id",
+        "type": "string"
+      },
+      "project_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Project Id"
+      },
+      "core": {
+        "title": "Core",
+        "type": "boolean"
+      },
+      "created_at": {
+        "title": "Created At",
+        "type": "string"
+      },
+      "source": {
+        "title": "Source",
+        "type": "string"
+      },
+      "source_session_id": {
+        "title": "Source Session Id",
+        "type": "string"
+      },
+      "source_role": {
+        "enum": [
+          "user",
+          "assistant"
+        ],
+        "title": "Source Role",
+        "type": "string"
+      },
+      "source_text": {
+        "title": "Source Text",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "case_id",
+      "description",
+      "body",
+      "type",
+      "user_id",
+      "project_id",
+      "core",
+      "created_at",
+      "source",
+      "source_session_id",
+      "source_role",
+      "source_text"
+    ],
+    "title": "Memory",
+    "type": "object"
+  },
+  "input": {
+    "$defs": {
+      "Scope": {
+        "additionalProperties": false,
+        "properties": {
+          "user_id": {
+            "title": "User Id",
+            "type": "string"
+          },
+          "project_id": {
+            "title": "Project Id",
+            "type": "string"
+          },
+          "as_of": {
+            "title": "As Of",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "project_id",
+          "as_of"
+        ],
+        "title": "Scope",
+        "type": "object"
+      },
+      "SetupEvent": {
+        "additionalProperties": false,
+        "properties": {
+          "operation": {
+            "const": "forget",
+            "title": "Operation",
+            "type": "string"
+          },
+          "memory_id": {
+            "title": "Memory Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "operation",
+          "memory_id"
+        ],
+        "title": "SetupEvent",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "group_id": {
+        "title": "Group Id",
+        "type": "string"
+      },
+      "split": {
+        "enum": [
+          "development",
+          "holdout"
+        ],
+        "title": "Split",
+        "type": "string"
+      },
+      "category": {
+        "enum": [
+          "semantic_recall",
+          "multi_memory",
+          "correction",
+          "temporal",
+          "current_override",
+          "user_isolation",
+          "project_isolation",
+          "deleted_memory",
+          "abstention",
+          "core_residency",
+          "historical_question",
+          "source_priority"
+        ],
+        "title": "Category",
+        "type": "string"
+      },
+      "scope": {
+        "$ref": "#/$defs/Scope"
+      },
+      "corpus_ids": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 30,
+        "minItems": 6,
+        "title": "Corpus Ids",
+        "type": "array"
+      },
+      "setup_events": {
+        "items": {
+          "$ref": "#/$defs/SetupEvent"
+        },
+        "title": "Setup Events",
+        "type": "array"
+      },
+      "query": {
+        "maxLength": 2000,
+        "minLength": 1,
+        "title": "Query",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "group_id",
+      "split",
+      "category",
+      "scope",
+      "corpus_ids",
+      "setup_events",
+      "query"
+    ],
+    "title": "Input",
+    "type": "object"
+  },
+  "gold": {
+    "$defs": {
+      "Grade": {
+        "additionalProperties": false,
+        "properties": {
+          "memory_id": {
+            "title": "Memory Id",
+            "type": "string"
+          },
+          "grade": {
+            "maximum": 3,
+            "minimum": 0,
+            "title": "Grade",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "memory_id",
+          "grade"
+        ],
+        "title": "Grade",
+        "type": "object"
+      },
+      "InvalidUseRule": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "memory_ids": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Memory Ids",
+            "type": "array"
+          },
+          "criterion": {
+            "minLength": 1,
+            "title": "Criterion",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "memory_ids",
+          "criterion"
+        ],
+        "title": "InvalidUseRule",
+        "type": "object"
+      },
+      "Requirement": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "memory",
+              "user",
+              "evaluation"
+            ],
+            "title": "Source",
+            "type": "string"
+          },
+          "memory_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Memory Ids",
+            "type": "array"
+          },
+          "criterion": {
+            "minLength": 1,
+            "title": "Criterion",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "memory_ids",
+          "criterion"
+        ],
+        "title": "Requirement",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "annotation_status": {
+        "const": "developer_candidate_pending_review",
+        "title": "Annotation Status",
+        "type": "string"
+      },
+      "memory_dependency": {
+        "enum": [
+          "required",
+          "none"
+        ],
+        "title": "Memory Dependency",
+        "type": "string"
+      },
+      "relevance": {
+        "items": {
+          "$ref": "#/$defs/Grade"
+        },
+        "title": "Relevance",
+        "type": "array"
+      },
+      "requirements": {
+        "items": {
+          "$ref": "#/$defs/Requirement"
+        },
+        "minItems": 1,
+        "title": "Requirements",
+        "type": "array"
+      },
+      "invalid_use_rules": {
+        "items": {
+          "$ref": "#/$defs/InvalidUseRule"
+        },
+        "title": "Invalid Use Rules",
+        "type": "array"
+      },
+      "notes": {
+        "title": "Notes",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "annotation_status",
+      "memory_dependency",
+      "relevance",
+      "requirements",
+      "invalid_use_rules",
+      "notes"
+    ],
+    "title": "Gold",
+    "type": "object"
+  },
+  "prediction": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "dataset_manifest_sha256": {
+        "pattern": "^[a-f0-9]{64}$",
+        "title": "Dataset Manifest Sha256",
+        "type": "string"
+      },
+      "memory_enabled": {
+        "title": "Memory Enabled",
+        "type": "boolean"
+      },
+      "retrieved_ids": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Retrieved Ids",
+        "type": "array"
+      },
+      "core_ids": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Core Ids",
+        "type": "array"
+      },
+      "injected_ids": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Injected Ids",
+        "type": "array"
+      },
+      "status": {
+        "enum": [
+          "completed",
+          "failed",
+          "cancelled"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "answer": {
+        "title": "Answer",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "dataset_manifest_sha256",
+      "memory_enabled",
+      "retrieved_ids",
+      "core_ids",
+      "injected_ids",
+      "status",
+      "answer"
+    ],
+    "title": "Prediction",
+    "type": "object"
+  },
+  "review": {
+    "$defs": {
+      "AnswerJudgment": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "answer_sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "title": "Answer Sha256",
+            "type": "string"
+          },
+          "complete": {
+            "title": "Complete",
+            "type": "boolean"
+          },
+          "requirements": {
+            "items": {
+              "$ref": "#/$defs/RequirementJudgment"
+            },
+            "title": "Requirements",
+            "type": "array"
+          },
+          "memory_claims": {
+            "items": {
+              "$ref": "#/$defs/ClaimJudgment"
+            },
+            "title": "Memory Claims",
+            "type": "array"
+          },
+          "invalid_uses": {
+            "items": {
+              "$ref": "#/$defs/InvalidUse"
+            },
+            "title": "Invalid Uses",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "answer_sha256",
+          "complete",
+          "requirements",
+          "memory_claims",
+          "invalid_uses"
+        ],
+        "title": "AnswerJudgment",
+        "type": "object"
+      },
+      "ClaimJudgment": {
+        "additionalProperties": false,
+        "properties": {
+          "quote": {
+            "minLength": 1,
+            "title": "Quote",
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "supported",
+              "contradicted",
+              "unverifiable"
+            ],
+            "title": "Verdict",
+            "type": "string"
+          },
+          "memory_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Memory Ids",
+            "type": "array"
+          }
+        },
+        "required": [
+          "quote",
+          "verdict",
+          "memory_ids"
+        ],
+        "title": "ClaimJudgment",
+        "type": "object"
+      },
+      "InvalidUse": {
+        "additionalProperties": false,
+        "properties": {
+          "rule_id": {
+            "title": "Rule Id",
+            "type": "string"
+          },
+          "memory_id": {
+            "title": "Memory Id",
+            "type": "string"
+          },
+          "quote": {
+            "minLength": 1,
+            "title": "Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "rule_id",
+          "memory_id",
+          "quote"
+        ],
+        "title": "InvalidUse",
+        "type": "object"
+      },
+      "RequirementJudgment": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "passed": {
+            "title": "Passed",
+            "type": "boolean"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "passed",
+          "evidence_quote"
+        ],
+        "title": "RequirementJudgment",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "reviewer": {
+        "minLength": 1,
+        "title": "Reviewer",
+        "type": "string"
+      },
+      "reviewed_at": {
+        "title": "Reviewed At",
+        "type": "string"
+      },
+      "independent_of_authoring": {
+        "title": "Independent Of Authoring",
+        "type": "boolean"
+      },
+      "judgments": {
+        "items": {
+          "$ref": "#/$defs/AnswerJudgment"
+        },
+        "title": "Judgments",
+        "type": "array"
+      }
+    },
+    "required": [
+      "reviewer",
+      "reviewed_at",
+      "independent_of_authoring",
+      "judgments"
+    ],
+    "title": "Review",
+    "type": "object"
+  }
+}

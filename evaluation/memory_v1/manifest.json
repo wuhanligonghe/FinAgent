@@ -1,0 +1,13 @@
+{
+  "version": "memory-v1-candidate",
+  "annotation_status": "developer_candidate_pending_review",
+  "cases": 48,
+  "memories": 364,
+  "files": {
+    "inputs.jsonl": "bd7dbff2c2b4e3faa915fe348b93522574ec7fb85cf1a34732738b20c072d5e0",
+    "memories.jsonl": "5994136ac80234eb7c73d4814fd689a5eef8c7af74fc32193cbc378d0938a874",
+    "gold.jsonl": "bd71175ba3f0029aac15ef8e320c4548d2a5eb8b94c83416064288c610aa41ab",
+    "protocol.json": "dabed888b64ea67e310cba1bffa07054e095bccb2476112cacd6a010722237ab",
+    "schemas.json": "7a3698226d288d23b30eba666b6676d67d9515ca0b016ba7baac047775654343"
+  }
+}

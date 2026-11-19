@@ -1,0 +1,16 @@
+{
+  "schema_version": "nlu_sft2.bundle.1",
+  "model_id": "finagent-intent:qwen3.5-9b-v2-f16",
+  "ollama_digest": "3a4ab29117f0387d3c6a0074eac5419672e659a7eb7a988c13f71d9cc9f35080",
+  "gguf_sha256": "f637fdb857d3914bdf6bde8d001fec88920ab0f271d4ac5ec2e35500d8fe44e3",
+  "tokenizer_sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f",
+  "prompt_sha256": "efeaa618c9428d0c248157cc7dc105dac2b29443d1e9d0f631f5fde5780226b3",
+  "schema_sha256": "3461c6a83c10841ced64a3a3b5cbc90da520543409157446b76b7234fa62a956",
+  "base_model": "Qwen/Qwen3.5-9B",
+  "base_revision": "Qwen3.5-9B",
+  "context_tokens": 4096,
+  "output_tokens": 1024,
+  "template_verified": true,
+  "quality_status": "diagnostic",
+  "qualification_sha256": null
+}

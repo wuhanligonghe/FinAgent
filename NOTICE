@@ -1,0 +1,73 @@
+TradingAgents-Astock
+Copyright 2026 Simon (github.com/simonlin1212)
+
+This product is a fork of TradingAgents, originally developed by
+TauricResearch (https://github.com/TauricResearch/TradingAgents),
+licensed under the Apache License, Version 2.0.
+
+Original work Copyright 2024-2025 TauricResearch
+Licensed under the Apache License, Version 2.0
+(https://www.apache.org/licenses/LICENSE-2.0)
+
+Modifications in this fork include:
+- A-stock (China mainland) data layer using mootdx, Tencent Finance, and akshare
+- Three new A-stock specific analyst agents (Policy, Hot Money, Lockup)
+- A-stock trading constraints (T+1, price limits, lot sizes) in Trader and PM
+- Chinese language output support
+- CSI 300 benchmark for alpha calculation (replacing SPY)
+- Various prompt and pipeline adaptations for A-share market specifics
+
+See CHANGES_FROM_UPSTREAM.md for the full list of modifications.
+
+MyTradingAgent secondary development (2026-10-04): added the FastAPI stock
+query service, structured Tencent/Sina adapters, Vue stock lookup interface,
+light theme, and offline contract checks. The original agent pipeline and
+legacy interfaces remain inherited work. See doc/个人开发记录.md for status.
+
+FinAgnt (2026-10-18): independently implemented Agent Loop, tool registry,
+validation, bounded runtime and evidence storage. Data source endpoint, encoding
+and field mapping methods adapted from the local Trading project:
+backend/providers.py, backend/service.py, tradingagents/dataflows/a_stock.py,
+and tradingagents/dataflows/sina_finance.py. Adapted files identify their origin.
+Runtime does not import Trading or depend on its checkout path.
+learn-claude-code was consulted for the loop/dispatch design; its shell tools
+and agent execution code are not included in this project.
+
+FinAgent 0.2.0 (2026-10-19): independently implemented versioned disclosure
+imports, evidence-bound financial programs, calendar-aware benchmark reviews,
+event timing, conversation scope, protocol-safe compaction and recovery.
+Public disclosure PDFs are referenced by source manifests and are not included
+in the distribution. exchange_calendars and pdfplumber remain separate optional
+dependencies under their own licenses.
+
+FinSight phase 2 (2026-10-20): independently implemented role profiles,
+research coordination, SQLite task admission, evidence grants, shared budgets,
+bounded expert execution, report handoffs and offline evaluation tooling.
+The five-role domain split and public fund-flow / attention / news endpoint
+methods were adapted from local Trading tradingagents/agents/analysts and
+tradingagents/dataflows/a_stock.py. DeerFlow's harness/skill/subagent design
+was consulted; no DeerFlow or LangGraph execution framework is imported.
+
+FinSight v2.1 (2026-10-20): independently implemented versioned deliberation
+contracts, host quality gates, alternating bull/bear and three-perspective
+risk turns, research manager, trader proposal and portfolio decision handoffs.
+Role responsibilities and direction-only research boundaries were consulted
+from local Trading tradingagents/agents/researchers, managers, trader and
+risk_mgmt. Runtime, contracts and prompts here are independent implementations;
+no Trading/LangChain/LangGraph runtime or credentials are included.
+
+FinSight prompt revision (2026-10-24): expanded the fourteen existing role
+instructions using the local Trading tradingagents/agents/analysts,
+researchers, managers, trader, risk_mgmt and quality_gate.py as references.
+Adapted role methods are stored in src/finagent/skills/*/SKILL.md; shared
+evidence, review and synthesis instructions retain FinAgent's native tool
+contracts, scope restrictions and structured submissions. No Trading runtime
+dependency was added. See doc/PROMPT_ADAPTATION.md for the mapping.
+
+FinAgent Agent Skills migration (2026-10-24): converted role method documents
+to named skill bundles with YAML discovery metadata, added lazy read-only
+skill/resource tools, and separated fixed role contracts from optional methods.
+The format and progressive disclosure design follow OpenAI's public Skills
+documentation; the loader and execution integration are implemented locally.
+PyYAML is used for safe frontmatter parsing under its separate license.
+See doc/SKILLS.md for runtime behavior, packaging and validation boundaries.

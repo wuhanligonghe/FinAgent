@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finagent"
+version = "3.1.0"
+description = "A persistent financial Agent built on the learn-claude-code harness"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.7,<3", "httpx>=0.27,<1", "beautifulsoup4>=4.12,<5", "tzdata>=2024.1", "PyYAML>=6,<7", "jsonschema>=4.20,<5", "redis>=5,<8", "SQLAlchemy>=2.0,<2.1", "PyMySQL[rsa]>=1.1,<2", "alembic>=1.13,<2"]
+
+[project.optional-dependencies]
+web = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "python-multipart>=0.0.18,<1", "argon2-cffi>=23.1,<26", "email-validator>=2.2,<3"]
+pdf = ["pdfplumber>=0.11,<1"]
+calendar = ["exchange-calendars>=4.5,<5"]
+nlu = ["tokenizers>=0.21,<1"]
+reranker = ["torch>=2.6,<3", "transformers>=4.51,<5", "accelerate>=1,<2", "bitsandbytes>=0.46,<1", "fastapi>=0.115,<1", "uvicorn>=0.30,<1"]
+
+[project.scripts]
+finagent = "finagent.cli:main"
+finsight-web = "finagent.web.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES"]
+
+[tool.setuptools.package-data]
+finagent = ["prompts/*.md", "resources/*.json", "resources/*.txt", "skills/*/SKILL.md", "skills/*/references/*.md", "research/prompts/*.md", "harness/*.json"]

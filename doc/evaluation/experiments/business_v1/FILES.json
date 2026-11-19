@@ -1,0 +1,17 @@
+{
+  "files": {
+    "sample_traces.json": "16be71ed28418ef0b094543a792b1dd2e5b7b60aad056e3b6600408145ba8a10",
+    "report.json": "c3ec0b225a05a11709c944200d895ecce593d8b83be0dbb70a77f0b881ba6312",
+    "inference_manifest.json": "bce29fd517ee2f2e0d2be7debf1d432b4742a059cecaf67baeac01b079a2d198",
+    "REPORT.md": "2a1d05acf3db459652b29db34da191ed7911d89ef42730ca9cd82baa592fbda5",
+    "RESUME.md": "f8724304122f957b3cd446a89dc997fafa1a626aae79db0e7149f08d7d2f7e13",
+    "analysis_manifest.json": "3dfd39b883bc734a7f3705e75fc251c868949d85096b1017cc28e51334ca30ab",
+    "validation.json": "bd60046feffa70afc56e86f2c863f6f094bd1bfc311e414db7951af86a42f8b0",
+    "README.md": "253deebb3e956d244978d3a00c28c61269e69af48651fa6215a5f72978f77b68",
+    "metrics.csv": "2d68bbdc5b409c44a07ee9f55b00303f8acb64284808bff7cd75592ca74d5792",
+    "inference_dataset_v1.json": "c126395a527dd616fb62309a53c224407ab05ec1dda0b5d1c7c1dfb633e2bbae",
+    "synthetic_sources.json": "794ad9d77b94b358df425f577442a723e922330e876712d1f217d6c531ad472f",
+    "retrieval_development.json": "056d28074a5bb29f5d2fed67fc67ffab6aaa6776e7ffa19a0044025b53c350db"
+  },
+  "note": "精简公开快照；不含鉴权头、完整模型上下文或本地运行数据库。"
+}

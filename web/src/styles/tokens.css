@@ -1,0 +1,10 @@
+:root {
+  --background: #f8f9f6;
+  --sidebar: #f0f2ed;
+  --text: #202723;
+  --muted: #7c857f;
+  --primary: #254f42;
+  --border: #e3e7e1;
+  --sidebar-width: 248px;
+  --toc-width: 210px;
+}

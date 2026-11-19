@@ -1,0 +1,345 @@
+{
+  "schema_version": "finagent.harness_reference.1",
+  "recorded_date": "2026-10-30",
+  "purpose": "Content baseline for FinSight v3 requirements; hashes pin the local working-tree reference, not a claim that upstream HEAD is clean.",
+  "reference_root": "/home/hxj/Agent/learn-claude-code",
+  "reference_head": "0dcafa2ae053a1ddd6a72f265431104b08a5aa13",
+  "working_tree_has_tracked_changes": true,
+  "tracked_change_count": 410,
+  "normative_scope": "New s01-s17 runtime chapters, their Chinese READMEs and behavior tests; course web frontend is not a runtime delivery requirement.",
+  "source_license": "MIT; preserve copyright and permission notice for copied or substantially adapted source.",
+  "chapter_code_files": [
+    "s01_agent_loop/code.py",
+    "s02_tool_use/code.py",
+    "s03_permission/code.py",
+    "s04_hooks/code.py",
+    "s05_todo_write/code.py",
+    "s06_subagent/code.py",
+    "s07_skill_loading/code.py",
+    "s08_context_compact/code.py",
+    "s09_memory/code.py",
+    "s10_task_system/code.py",
+    "s11_background_tasks/code.py",
+    "s12_cron_scheduler/code.py",
+    "s13_agent_teams/code.py",
+    "s14_mcp_plugin/code.py",
+    "s15_integrated_harness/code.py",
+    "s16_workflow_runtime/code.py",
+    "s17_goal_loop/code.py"
+  ],
+  "s15_builtin_tools": [
+    "bash",
+    "read_file",
+    "write_file",
+    "edit_file",
+    "glob",
+    "todo_write",
+    "task",
+    "load_skill",
+    "compact",
+    "create_task",
+    "update_task",
+    "list_tasks",
+    "get_task",
+    "claim_task",
+    "complete_task",
+    "schedule_cron",
+    "list_crons",
+    "cancel_cron",
+    "spawn_teammate",
+    "list_teammates",
+    "send_message",
+    "request_shutdown",
+    "request_plan",
+    "review_plan",
+    "create_worktree",
+    "connect_mcp"
+  ],
+  "files": [
+    {
+      "path": "README-zh.md",
+      "size_bytes": 28169,
+      "sha256": "0930242c183c09b5ad86e702cf1f24b756161237ec9eae6449f67c6fabb47fa7"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1089,
+      "sha256": "4db5f1ba8b6eedf200a20f2ad1ed2a6a9ff4ddb16b17ea104b12cd071bc542e4"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 52,
+      "sha256": "b276ae93133e46ee1a420d84e842faa8da8b9ac4b2fe10908722457df3e056c8"
+    },
+    {
+      "path": "s01_agent_loop/code.py",
+      "size_bytes": 4669,
+      "sha256": "0f50f3af4c85681120fd6e5fbc3b5e7f54ac94348507692b31b4a21c13f43c2f"
+    },
+    {
+      "path": "s01_agent_loop/README.zh.md",
+      "size_bytes": 4814,
+      "sha256": "3a97b777ecf93400671b60140fbaec9e94a8dcc6c51b0569e8ecc08d37690897"
+    },
+    {
+      "path": "s02_tool_use/code.py",
+      "size_bytes": 7472,
+      "sha256": "b000a98df3d63c8199395ca28fbc0a1256a6b636992b71a718a40e6270707645"
+    },
+    {
+      "path": "s02_tool_use/README.zh.md",
+      "size_bytes": 5074,
+      "sha256": "40cc5ba9794bdfe3d1720091de61421bada7a48301e440dc46451ba56ada4925"
+    },
+    {
+      "path": "s03_permission/code.py",
+      "size_bytes": 9722,
+      "sha256": "3efc69ac2113f89c47a56b900832a9465f8a99c0387d3d2d86adfe377415bbb7"
+    },
+    {
+      "path": "s03_permission/README.zh.md",
+      "size_bytes": 5721,
+      "sha256": "682fcb365b481b438fa1de3fe197ce43bf25b8ccb3310d94cfabd6bd551c1de1"
+    },
+    {
+      "path": "s04_hooks/code.py",
+      "size_bytes": 10657,
+      "sha256": "dbb74ecde20fd863632b8984b33f6b01b571356f40d65b1873de73a9cd15059a"
+    },
+    {
+      "path": "s04_hooks/README.zh.md",
+      "size_bytes": 8122,
+      "sha256": "2c5ef3f1d66614aae3daae6def78011e020434d2dbdfc08c5604d335bb8ac31f"
+    },
+    {
+      "path": "s05_todo_write/code.py",
+      "size_bytes": 14016,
+      "sha256": "43d8fe61d985d5043eb6c0040c6cd642211200b5372ae1eaf34aa0ea6bb277e4"
+    },
+    {
+      "path": "s05_todo_write/README.zh.md",
+      "size_bytes": 5479,
+      "sha256": "869a6712b4ab6326c120c138e7d619352456acc2ec9627f3c6ff3ab3eb6bf385"
+    },
+    {
+      "path": "s06_subagent/code.py",
+      "size_bytes": 12934,
+      "sha256": "7c279fc74ebf2ac7fb6927bab1c02e6741dc6df90d33efce8621c4caeae24b3e"
+    },
+    {
+      "path": "s06_subagent/README.zh.md",
+      "size_bytes": 4485,
+      "sha256": "e09b47c95872c4ea4a40fb8bd6b2e9ddb7a12afbf27f4141d2ba7989a3bacf83"
+    },
+    {
+      "path": "s07_skill_loading/code.py",
+      "size_bytes": 13737,
+      "sha256": "fe1c80c6fced1cccc6bc47ea8acfe5427ee62fcdf322d63a0ed9aa894bcccacc"
+    },
+    {
+      "path": "s07_skill_loading/README.zh.md",
+      "size_bytes": 4975,
+      "sha256": "386f783d0fade574b5df68cfe63f5da77c1ce8c2f29474537f6387d787b0bbb0"
+    },
+    {
+      "path": "s08_context_compact/code.py",
+      "size_bytes": 24376,
+      "sha256": "e4286b1d7ade975c9e95771a1b67e6f278672ea62d8f6b64205e71660896251a"
+    },
+    {
+      "path": "s08_context_compact/README.zh.md",
+      "size_bytes": 14537,
+      "sha256": "fbfcdf6e43b49b701e8ba878d39c10303bff93fda5d326fcf6194b24faa802f4"
+    },
+    {
+      "path": "s09_memory/code.py",
+      "size_bytes": 28015,
+      "sha256": "c827bd5574cc3b7f5eaacbcf9ec26341cd6b2f7e51a3014b81c9c7acaec1c651"
+    },
+    {
+      "path": "s09_memory/README.zh.md",
+      "size_bytes": 8354,
+      "sha256": "55538ad85d7c2c65b54cadb6742c2c30d43dc3cd53c536beddac0af45eadc73b"
+    },
+    {
+      "path": "s10_task_system/code.py",
+      "size_bytes": 21013,
+      "sha256": "a32e1171be7f011008acd09b69ca511483182b80fc85ce0ea322be772f3c64c5"
+    },
+    {
+      "path": "s10_task_system/README.zh.md",
+      "size_bytes": 9107,
+      "sha256": "6b76935265a949f6ddfa61d89f1e04f1eacca4439dbdf4ab5520cd63b97cb466"
+    },
+    {
+      "path": "s11_background_tasks/code.py",
+      "size_bytes": 17104,
+      "sha256": "54b9ce7799075defc231b1bba44e24c3ba272618e3afebbd61218590bd47f1b0"
+    },
+    {
+      "path": "s11_background_tasks/README.zh.md",
+      "size_bytes": 7060,
+      "sha256": "e74a413f9e7c3e15532e21c3970ef3ab64083f346e2f0d117ace7795189d623d"
+    },
+    {
+      "path": "s12_cron_scheduler/code.py",
+      "size_bytes": 25908,
+      "sha256": "6aea6b44a09fdec7e5113a87be549450785e846e1eab600471cf390c34f48c7c"
+    },
+    {
+      "path": "s12_cron_scheduler/README.zh.md",
+      "size_bytes": 5999,
+      "sha256": "074375240e34cbd08d9f20e197c0bd4b8276ec9238106be0b0a070cd1024ace4"
+    },
+    {
+      "path": "s13_agent_teams/code.py",
+      "size_bytes": 72534,
+      "sha256": "1c5c94bdabff029ab8f47e671b18cda0b9981694cdf1c89197395c7a00df1327"
+    },
+    {
+      "path": "s13_agent_teams/README.zh.md",
+      "size_bytes": 19428,
+      "sha256": "62e944d2678f0de42fa75f4f297f4b923ff053dac24fd85f4aea13a97e32fc79"
+    },
+    {
+      "path": "s14_mcp_plugin/code.py",
+      "size_bytes": 18902,
+      "sha256": "9d05d664a7a1414726ced9ac090010a86546021c68c291eb00ffad227f98f5ad"
+    },
+    {
+      "path": "s14_mcp_plugin/README.zh.md",
+      "size_bytes": 6764,
+      "sha256": "7b94fb480442d7925e4182bee4999eb9b8bea5b62d74f15e5c6ed08f32a764b4"
+    },
+    {
+      "path": "s15_integrated_harness/code.py",
+      "size_bytes": 129897,
+      "sha256": "d0622431d7736716766d13309490ae7d8912ed699974c96646a618b49e6e2741"
+    },
+    {
+      "path": "s15_integrated_harness/README.zh.md",
+      "size_bytes": 12443,
+      "sha256": "b2d959861b0755eabb9a8cde65cbd54af733af024801d23546beb9cd472a6636"
+    },
+    {
+      "path": "s16_workflow_runtime/code.py",
+      "size_bytes": 33440,
+      "sha256": "f9f6ae2d604580b43ae2cf3f2c6b259aa5a3d78be75f08cd37036e1a7d32851d"
+    },
+    {
+      "path": "s16_workflow_runtime/README.zh.md",
+      "size_bytes": 14288,
+      "sha256": "72a516bdc572c512fbf5800005d8df9411220f4a7ceffa84138647c17f60424f"
+    },
+    {
+      "path": "s17_goal_loop/code.py",
+      "size_bytes": 31396,
+      "sha256": "8c9a6b20f8860d1be4e2e64875df783d0c1552093a630af1767b461d43d545c6"
+    },
+    {
+      "path": "s17_goal_loop/README.zh.md",
+      "size_bytes": 9287,
+      "sha256": "395d55ebb4f808ac000e1ec6d8f5653708859757ba2bd0c2eff8c42532b3021e"
+    },
+    {
+      "path": "tests/test_agent_loop_boundaries.py",
+      "size_bytes": 14978,
+      "sha256": "e7773df989b935e95ad359aefa3661308dad80be814112b89bd30e5b6b5ae570"
+    },
+    {
+      "path": "tests/test_agent_teams_runtime.py",
+      "size_bytes": 93499,
+      "sha256": "0806347208e2b2a35956686c4d48fbcd68ec0ca0b884a9fe13b664b53eaf4eed"
+    },
+    {
+      "path": "tests/test_agents_smoke.py",
+      "size_bytes": 626,
+      "sha256": "487644f6a4f9887a17bfacb6c8f0a3ac4d68f9ee069b79b2eecfeb0fba6b1e6f"
+    },
+    {
+      "path": "tests/test_background_tasks.py",
+      "size_bytes": 5476,
+      "sha256": "4f7f29c60e77477c0ded55baddac94a3196304340fbd5e0f36fcaffb1f98fd86"
+    },
+    {
+      "path": "tests/test_chapter_readmes.py",
+      "size_bytes": 1085,
+      "sha256": "9a49e4bc87b8e8f870a21a3b2c8dd252462dc7859375fe62776404cdd7af0c87"
+    },
+    {
+      "path": "tests/test_compaction_tool_pairs.py",
+      "size_bytes": 19479,
+      "sha256": "8ccaed2cf74c2ed47da983618639851932dc684430c1a4d73a2a93518dcf28a0"
+    },
+    {
+      "path": "tests/test_cron_scheduler.py",
+      "size_bytes": 6456,
+      "sha256": "49f93d09f17d37627c03ef90739f1b05b01d79f772bb5001b5c37319f8134135"
+    },
+    {
+      "path": "tests/test_goal_loop.py",
+      "size_bytes": 16565,
+      "sha256": "10dcc04d3bbc08113cbd5c19aa0ace9aa7af9215d951e94c95636ca372fe1f86"
+    },
+    {
+      "path": "tests/test_permission_command_words.py",
+      "size_bytes": 3903,
+      "sha256": "2d670451c640f73da79f88037fbbb6ebce0cd9c07b362ce9623c084a7284d9f3"
+    },
+    {
+      "path": "tests/test_readline_prompts.py",
+      "size_bytes": 3351,
+      "sha256": "98417a811a3aaf7a81bcbf77e1fdee159eb6eaf4911a254844ff14cc8caf3baa"
+    },
+    {
+      "path": "tests/test_s06_subagent.py",
+      "size_bytes": 4493,
+      "sha256": "b7564dc092b281dfc5ee7f91fe6ac2ccd61f6f1fb2c7ee4c148e99832bfc3a5c"
+    },
+    {
+      "path": "tests/test_s08_context_compact.py",
+      "size_bytes": 5163,
+      "sha256": "1cfeb866f37b4a01fd1d144490bf6aa55ae350de2ce8a91113b5dd4522fe89f8"
+    },
+    {
+      "path": "tests/test_s_full_background.py",
+      "size_bytes": 6188,
+      "sha256": "617865e061d3105b552cf4c27393421ebac263fabc7f3bfa22935888fbacc121"
+    },
+    {
+      "path": "tests/test_skill_loading.py",
+      "size_bytes": 6947,
+      "sha256": "42242a7add962d467e263d22cf6c8b915b112cfaebf1a232164312a1e20b8ae7"
+    },
+    {
+      "path": "tests/test_subprocess_output_encoding.py",
+      "size_bytes": 3908,
+      "sha256": "695e3e1403d6d01d4bc2157c5ab0cb541be29029115b2705e8d8b0b9cfe670e0"
+    },
+    {
+      "path": "tests/test_task_system.py",
+      "size_bytes": 8865,
+      "sha256": "6ae0683d073f849b5df9ee5778750aa0327d7ad6f6aeb97217c9f1794d8bf34f"
+    },
+    {
+      "path": "tests/test_todo_write_string_input.py",
+      "size_bytes": 7654,
+      "sha256": "c8c46cd94f0dbd0b1cd8326a4a05ae3759d3c5300c3a61e68491676b55bfcde4"
+    },
+    {
+      "path": "tests/test_utf8_text_io.py",
+      "size_bytes": 2357,
+      "sha256": "53ab64b8b0f792214eca0f4c92dbd9a676b380f23e6a4f12661bf95bf14ab58a"
+    },
+    {
+      "path": "tests/test_web_scenarios.py",
+      "size_bytes": 8507,
+      "sha256": "77451a1a69e8266d47b9663a491f54a92fdf53f16ca622282e04710dac91d173"
+    },
+    {
+      "path": "tests/test_workflow_goal_lessons.py",
+      "size_bytes": 17089,
+      "sha256": "5aed7c118e6789245c213be6ca28087b8780cebdf28421a55b0378bacbbf4b90"
+    }
+  ]
+}

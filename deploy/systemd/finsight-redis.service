@@ -1,0 +1,16 @@
+[Unit]
+Description=FinSight Redis runtime storage
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Agent/FinAgent
+ExecStart=%h/Agent/FinAgent/.venv/bin/python %h/Agent/FinAgent/scripts/serve_runtime_redis.py
+ExecStartPost=%h/Agent/FinAgent/.venv/bin/python %h/Agent/FinAgent/scripts/check_runtime_redis.py --wait 10
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=30
+UMask=0077
+
+[Install]
+WantedBy=default.target

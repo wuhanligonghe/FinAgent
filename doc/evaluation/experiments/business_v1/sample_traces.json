@@ -1,0 +1,395 @@
+[
+  {
+    "case_id": "development_600519_lookup",
+    "arm": "direct",
+    "repeat": 0,
+    "dialogue_success": true,
+    "turns": [
+      {
+        "user": "查询贵州茅台2024年营业收入，引用原文。",
+        "answer": "{\"action\":\"answer\",\"text\":\"贵州茅台2024年营业收入为4,520,000,000.00元。\",\"request\":{\"symbols\":[\"600519.SH\"],\"periods\":[\"2024-12-31\"],\"metrics\":[\"revenue\"],\"scope\":\"consolidated\",\"basis\":\"annual\",\"currency\":\"CNY\",\"unit\":\"元\",\"exclude\":[]},\"claims\":[{\"symbol\":\"600519.SH\",\"metric\":\"revenue\",\"period_end\":\"2024-12-31\",\"scope\":\"consolidated\",\"basis\":\"annual\",\"currency\":\"CNY\",\"value\":\"4520000000.00\",\"unit\":\"元\",\"citations\":[{\"document_id\":\"doc_1bf7759fee2ab6fcacebed75453b4cd69280384a536449c515c0163ac0f7b0ed\",\"locator\":\"table:1\"}]}]}",
+        "runtime_status": "completed",
+        "tools": [],
+        "model_calls": 1,
+        "tool_calls": 0,
+        "elapsed_seconds": 1.9083163009490818,
+        "grade": {
+          "format_valid": true,
+          "task_success": true,
+          "slot_correct": 8,
+          "slot_total": 8,
+          "claim_correct": 1,
+          "claim_required": 1,
+          "claim_emitted": 1,
+          "citation_supported": 1,
+          "citation_claims": 1,
+          "unsupported_numeric_claims": 0,
+          "text_amount_count": 1,
+          "undeclared_text_amounts": 0,
+          "unsupported_text_amounts": 0,
+          "contract_complete": true,
+          "unnecessary_clarification": false,
+          "checks": [
+            {
+              "check": "action",
+              "passed": true,
+              "actual": "answer",
+              "expected": "answer"
+            },
+            {
+              "check": "request.symbols",
+              "passed": true,
+              "actual": [
+                "600519.SH"
+              ],
+              "expected": [
+                "600519.SH"
+              ]
+            },
+            {
+              "check": "request.periods",
+              "passed": true,
+              "actual": [
+                "2024-12-31"
+              ],
+              "expected": [
+                "2024-12-31"
+              ]
+            },
+            {
+              "check": "request.metrics",
+              "passed": true,
+              "actual": [
+                "revenue"
+              ],
+              "expected": [
+                "revenue"
+              ]
+            },
+            {
+              "check": "request.scope",
+              "passed": true,
+              "actual": "consolidated",
+              "expected": "consolidated"
+            },
+            {
+              "check": "request.basis",
+              "passed": true,
+              "actual": "annual",
+              "expected": "annual"
+            },
+            {
+              "check": "request.currency",
+              "passed": true,
+              "actual": "CNY",
+              "expected": "CNY"
+            },
+            {
+              "check": "request.unit",
+              "passed": true,
+              "actual": "元",
+              "expected": "元"
+            },
+            {
+              "check": "request.exclude",
+              "passed": true,
+              "actual": [],
+              "expected": []
+            }
+          ],
+          "claim_checks": [
+            {
+              "key": [
+                "600519.SH",
+                "revenue",
+                "2024-12-31",
+                "consolidated",
+                "annual"
+              ],
+              "value_correct": true,
+              "citation_supported": true,
+              "expected_claim": true,
+              "duplicate": false,
+              "actual_value_base_unit": "4520000000.00",
+              "expected_value_base_unit": "4520000000.00"
+            }
+          ],
+          "text_amount_checks": [
+            {
+              "text": "4,520,000,000.00元",
+              "value_base_unit": "4520000000.00",
+              "declared": true,
+              "grounded_in_visible_sources": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "development_600519_lookup",
+    "arm": "agent_full",
+    "repeat": 0,
+    "dialogue_success": true,
+    "turns": [
+      {
+        "user": "查询贵州茅台2024年营业收入，引用原文。",
+        "answer": "{\"action\":\"answer\",\"text\":\"贵州茅台（600519.SH）2024年全年合并报表营业收入为4,520,000,000.00元。原文表格载明：“项目：2024年 全年 合并报表 人民币 元；营业收入：4520000000.00”（合成报告 doc_1bf7759f… 的table:1，2025-04-30发布）。该资料为冻结合成财报，仅用于验证口径。\",\"request\":{\"symbols\":[\"600519.SH\"],\"periods\":[\"2024-12-31\"],\"metrics\":[\"revenue\"],\"scope\":\"consolidated\",\"basis\":\"annual\",\"currency\":\"CNY\",\"unit\":\"元\",\"exclude\":[]},\"claims\":[{\"symbol\":\"600519.SH\",\"metric\":\"revenue\",\"period_end\":\"2024-12-31\",\"scope\":\"consolidated\",\"basis\":\"annual\",\"currency\":\"CNY\",\"value\":\"4520000000.00\",\"unit\":\"元\",\"citations\":[{\"document_id\":\"doc_1bf7759fee2ab6fcacebed75453b4cd69280384a536449c515c0163ac0f7b0ed\",\"locator\":\"table:1/row:2/col:2\"}]}]}",
+        "runtime_status": "completed",
+        "tools": [
+          "resolve_entity",
+          "update_task_frame",
+          "update_task_frame",
+          "search_evidence",
+          "read_document"
+        ],
+        "model_calls": 5,
+        "tool_calls": 5,
+        "elapsed_seconds": 7.880108850076795,
+        "grade": {
+          "format_valid": true,
+          "task_success": true,
+          "slot_correct": 8,
+          "slot_total": 8,
+          "claim_correct": 1,
+          "claim_required": 1,
+          "claim_emitted": 1,
+          "citation_supported": 1,
+          "citation_claims": 1,
+          "unsupported_numeric_claims": 0,
+          "text_amount_count": 1,
+          "undeclared_text_amounts": 0,
+          "unsupported_text_amounts": 0,
+          "contract_complete": true,
+          "unnecessary_clarification": false,
+          "checks": [
+            {
+              "check": "action",
+              "passed": true,
+              "actual": "answer",
+              "expected": "answer"
+            },
+            {
+              "check": "request.symbols",
+              "passed": true,
+              "actual": [
+                "600519.SH"
+              ],
+              "expected": [
+                "600519.SH"
+              ]
+            },
+            {
+              "check": "request.periods",
+              "passed": true,
+              "actual": [
+                "2024-12-31"
+              ],
+              "expected": [
+                "2024-12-31"
+              ]
+            },
+            {
+              "check": "request.metrics",
+              "passed": true,
+              "actual": [
+                "revenue"
+              ],
+              "expected": [
+                "revenue"
+              ]
+            },
+            {
+              "check": "request.scope",
+              "passed": true,
+              "actual": "consolidated",
+              "expected": "consolidated"
+            },
+            {
+              "check": "request.basis",
+              "passed": true,
+              "actual": "annual",
+              "expected": "annual"
+            },
+            {
+              "check": "request.currency",
+              "passed": true,
+              "actual": "CNY",
+              "expected": "CNY"
+            },
+            {
+              "check": "request.unit",
+              "passed": true,
+              "actual": "元",
+              "expected": "元"
+            },
+            {
+              "check": "request.exclude",
+              "passed": true,
+              "actual": [],
+              "expected": []
+            }
+          ],
+          "claim_checks": [
+            {
+              "key": [
+                "600519.SH",
+                "revenue",
+                "2024-12-31",
+                "consolidated",
+                "annual"
+              ],
+              "value_correct": true,
+              "citation_supported": true,
+              "expected_claim": true,
+              "duplicate": false,
+              "actual_value_base_unit": "4520000000.00",
+              "expected_value_base_unit": "4520000000.00"
+            }
+          ],
+          "text_amount_checks": [
+            {
+              "text": "4,520,000,000.00元",
+              "value_base_unit": "4520000000.00",
+              "declared": true,
+              "grounded_in_visible_sources": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "development_600519_lookup",
+    "arm": "agent_no_task",
+    "repeat": 0,
+    "dialogue_success": true,
+    "turns": [
+      {
+        "user": "查询贵州茅台2024年营业收入，引用原文。",
+        "answer": "{\"action\":\"answer\",\"text\":\"贵州茅台（600519.SH）2024年年度合并报表中的营业收入为 4,520,000,000.00 元。原文表格表头为“项目 | 2024年 全年 合并报表 人民币 元”，对应行是“营业收入 | 4520000000.00”。这份资料是冻结合成财报，其中的金额为虚构数据，不代表真实披露。\",\"request\":{\"symbols\":[\"600519.SH\"],\"periods\":[\"2024-12-31\"],\"metrics\":[\"revenue\"],\"scope\":\"consolidated\",\"basis\":\"annual\",\"currency\":\"CNY\",\"unit\":\"元\",\"exclude\":[]},\"claims\":[{\"symbol\":\"600519.SH\",\"metric\":\"revenue\",\"period_end\":\"2024-12-31\",\"scope\":\"consolidated\",\"basis\":\"annual\",\"currency\":\"CNY\",\"value\":\"4520000000.00\",\"unit\":\"元\",\"citations\":[{\"document_id\":\"doc_1bf7759fee2ab6fcacebed75453b4cd69280384a536449c515c0163ac0f7b0ed\",\"locator\":\"table:1/row:2/col:2\"}]}]}",
+        "runtime_status": "completed",
+        "tools": [
+          "resolve_entity",
+          "resolve_task_scope",
+          "search_evidence",
+          "get_company_disclosures",
+          "read_document"
+        ],
+        "model_calls": 4,
+        "tool_calls": 5,
+        "elapsed_seconds": 6.04091238998808,
+        "grade": {
+          "format_valid": true,
+          "task_success": true,
+          "slot_correct": 8,
+          "slot_total": 8,
+          "claim_correct": 1,
+          "claim_required": 1,
+          "claim_emitted": 1,
+          "citation_supported": 1,
+          "citation_claims": 1,
+          "unsupported_numeric_claims": 0,
+          "text_amount_count": 1,
+          "undeclared_text_amounts": 0,
+          "unsupported_text_amounts": 0,
+          "contract_complete": true,
+          "unnecessary_clarification": false,
+          "checks": [
+            {
+              "check": "action",
+              "passed": true,
+              "actual": "answer",
+              "expected": "answer"
+            },
+            {
+              "check": "request.symbols",
+              "passed": true,
+              "actual": [
+                "600519.SH"
+              ],
+              "expected": [
+                "600519.SH"
+              ]
+            },
+            {
+              "check": "request.periods",
+              "passed": true,
+              "actual": [
+                "2024-12-31"
+              ],
+              "expected": [
+                "2024-12-31"
+              ]
+            },
+            {
+              "check": "request.metrics",
+              "passed": true,
+              "actual": [
+                "revenue"
+              ],
+              "expected": [
+                "revenue"
+              ]
+            },
+            {
+              "check": "request.scope",
+              "passed": true,
+              "actual": "consolidated",
+              "expected": "consolidated"
+            },
+            {
+              "check": "request.basis",
+              "passed": true,
+              "actual": "annual",
+              "expected": "annual"
+            },
+            {
+              "check": "request.currency",
+              "passed": true,
+              "actual": "CNY",
+              "expected": "CNY"
+            },
+            {
+              "check": "request.unit",
+              "passed": true,
+              "actual": "元",
+              "expected": "元"
+            },
+            {
+              "check": "request.exclude",
+              "passed": true,
+              "actual": [],
+              "expected": []
+            }
+          ],
+          "claim_checks": [
+            {
+              "key": [
+                "600519.SH",
+                "revenue",
+                "2024-12-31",
+                "consolidated",
+                "annual"
+              ],
+              "value_correct": true,
+              "citation_supported": true,
+              "expected_claim": true,
+              "duplicate": false,
+              "actual_value_base_unit": "4520000000.00",
+              "expected_value_base_unit": "4520000000.00"
+            }
+          ],
+          "text_amount_checks": [
+            {
+              "text": "4,520,000,000.00 元",
+              "value_base_unit": "4520000000.00",
+              "declared": true,
+              "grounded_in_visible_sources": true
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

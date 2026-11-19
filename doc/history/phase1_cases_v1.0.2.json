@@ -1,0 +1,1110 @@
+{
+  "version": "1.0.2",
+  "revision": "2026-10-19 按用户要求暂时删除收盘复盘 Skill；E01 保留取数及计算，案例总数不变。",
+  "frozen_on": "2026-10-19",
+  "notice": "合成资料与模型替身；仅验证宿主合同，不作为真实模型成功率",
+  "as_of": "2024-05-01T16:00:00+08:00",
+  "cases": [
+    {
+      "id": "L01",
+      "category": "loop",
+      "input": "解析贵州茅台后查询其行情",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "resolve_entity",
+              "args": {
+                "query": "茅台"
+              }
+            }
+          ]
+        },
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "$symbol:resolve_entity"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "model_calls": 3,
+        "tool_calls": 2,
+        "source_requests": 1
+      },
+      "gates": [
+        "S1-01",
+        "S1-02"
+      ]
+    },
+    {
+      "id": "L02",
+      "category": "loop",
+      "input": "解释证据ID的用途",
+      "steps": [
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "model_calls": 1,
+        "source_requests": 0
+      },
+      "require_data": false,
+      "gates": [
+        "S1-01"
+      ]
+    },
+    {
+      "id": "L03",
+      "category": "loop",
+      "input": "未知工具拒绝并报告限制",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "unknown_tool",
+              "args": {}
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "errors": [
+          "UNKNOWN_TOOL"
+        ],
+        "source_requests": 0
+      },
+      "gates": [
+        "S1-04"
+      ]
+    },
+    {
+      "id": "L04",
+      "category": "loop",
+      "input": "拒绝非法证券和多余网络参数",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "00700.HK",
+                "url": "https://example.test"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "errors": [
+          "VALIDATION_ERROR"
+        ],
+        "source_requests": 0
+      },
+      "gates": [
+        "S1-04"
+      ]
+    },
+    {
+      "id": "L05",
+      "category": "loop",
+      "input": "同轮两个调用，一个成功一个失败",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            },
+            {
+              "tool": "unknown_tool",
+              "args": {}
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "tool_calls": 2,
+        "paired": true
+      },
+      "gates": [
+        "S1-03"
+      ]
+    },
+    {
+      "id": "L06",
+      "category": "loop",
+      "input": "截断响应不执行工具",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ],
+          "finish_reason": "length"
+        }
+      ],
+      "expected": {
+        "status": "failed",
+        "reason_contains": "MODEL_TRUNCATED",
+        "source_requests": 0,
+        "paired": true
+      },
+      "gates": [
+        "S1-11"
+      ]
+    },
+    {
+      "id": "L07",
+      "category": "loop",
+      "input": "连续重复错误应停止",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "unknown_tool",
+              "args": {}
+            }
+          ]
+        }
+      ],
+      "expected": {
+        "status": "failed",
+        "reason_contains": "NO_PROGRESS",
+        "tool_calls": 3
+      },
+      "gates": [
+        "S1-11"
+      ]
+    },
+    {
+      "id": "L08",
+      "category": "loop",
+      "input": "模型预算耗尽后停止",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "reason_contains": "MODEL_BUDGET",
+        "model_calls": 1
+      },
+      "limits": {
+        "model_calls": 1
+      },
+      "gates": [
+        "S1-11"
+      ]
+    },
+    {
+      "id": "D01",
+      "category": "data",
+      "input": "读取正常报价及原始来源",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "source": "tencent_quote",
+        "has_raw": true
+      },
+      "gates": [
+        "S1-05",
+        "S1-08"
+      ]
+    },
+    {
+      "id": "D02",
+      "category": "data",
+      "input": "查询指定历史窗口日线",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_daily_bars",
+              "args": {
+                "symbol": "600519",
+                "start": "2024-04-26",
+                "end": "2024-04-30"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "field": {
+          "tool": "get_daily_bars",
+          "path": [
+            "data",
+            "bars",
+            -1,
+            "date"
+          ],
+          "value": "2024-04-30"
+        }
+      },
+      "gates": [
+        "S1-05",
+        "S1-09"
+      ]
+    },
+    {
+      "id": "D03",
+      "category": "data",
+      "input": "主报价失败后使用备用来源",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "source": "sina_quote",
+        "source_requests": 2
+      },
+      "fixture": "fallback",
+      "gates": [
+        "S1-10"
+      ]
+    },
+    {
+      "id": "D04",
+      "category": "data",
+      "input": "查询公司消息并保留条目来源",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_stock_news",
+              "args": {
+                "symbol": "600519",
+                "start": "2024-04-01",
+                "end": "2024-04-30",
+                "source": "eastmoney"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "field": {
+          "tool": "get_stock_news",
+          "path": [
+            "data",
+            "articles",
+            0,
+            "published_at"
+          ],
+          "value": "2024-04-29T12:00:00+08:00"
+        }
+      },
+      "gates": [
+        "S1-06"
+      ]
+    },
+    {
+      "id": "D05",
+      "category": "data",
+      "input": "新闻没有覆盖时说明缺口",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_stock_news",
+              "args": {
+                "symbol": "600519",
+                "start": "2024-04-01",
+                "end": "2024-04-30",
+                "source": "eastmoney"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "empty_tool": "get_stock_news",
+        "source_requests": 1
+      },
+      "fixture": "empty_news",
+      "gates": [
+        "S1-06"
+      ]
+    },
+    {
+      "id": "D06",
+      "category": "data",
+      "input": "支持带交易所前缀的证券代码",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "SH600519"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "symbol": "600519.SH"
+      },
+      "gates": [
+        "S1-04"
+      ]
+    },
+    {
+      "id": "D07",
+      "category": "data",
+      "input": "查询2024一季报营业收入及字段位置",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_financial_statements",
+              "args": {
+                "symbol": "600519",
+                "statement": "income",
+                "report_period": "2024-03-31"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "field": {
+          "tool": "get_financial_statements",
+          "path": [
+            "data",
+            "reports",
+            0,
+            "metrics",
+            "revenue",
+            "raw_field"
+          ],
+          "value": "BIZINCO"
+        }
+      },
+      "gates": [
+        "S1-07",
+        "S1-08"
+      ]
+    },
+    {
+      "id": "D08",
+      "category": "data",
+      "input": "核对报价单位与缺失值",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "field": {
+          "tool": "get_quote",
+          "path": [
+            "data",
+            "volume_shares"
+          ],
+          "value": 200
+        },
+        "null_field": {
+          "tool": "get_quote",
+          "path": [
+            "data",
+            "pe_ttm"
+          ]
+        }
+      },
+      "gates": [
+        "S1-09"
+      ]
+    },
+    {
+      "id": "D09",
+      "category": "data",
+      "input": "通过登记ID回读原始报价",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        },
+        {
+          "calls": [
+            {
+              "tool": "read_evidence",
+              "args": {
+                "evidence_id": "$raw:get_quote"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "field_contains": {
+          "tool": "read_evidence",
+          "path": [
+            "data",
+            "text"
+          ],
+          "value": "v_sh600519"
+        }
+      },
+      "gates": [
+        "S1-08",
+        "S1-13"
+      ]
+    },
+    {
+      "id": "D10",
+      "category": "data",
+      "input": "当前快照不能冒充历史截止行情",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "errors": [
+          "SNAPSHOT_NOT_HISTORICAL"
+        ],
+        "source_requests": 0
+      },
+      "real_clock": true,
+      "gates": [
+        "S1-09"
+      ]
+    },
+    {
+      "id": "B01",
+      "category": "boundary",
+      "input": "数据未取得时拦截过早结束",
+      "steps": [
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "failed",
+        "reason_contains": "FINISH_CHECK_FAILED",
+        "model_calls": 3
+      },
+      "gates": [
+        "S1-11"
+      ]
+    },
+    {
+      "id": "B02",
+      "category": "boundary",
+      "input": "待澄清时暂停同轮依赖操作",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "ask_user",
+              "args": {
+                "question": "请选择利润口径"
+              }
+            },
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        }
+      ],
+      "expected": {
+        "status": "needs_clarification",
+        "errors": [
+          "CLARIFICATION_PENDING"
+        ],
+        "source_requests": 0,
+        "paired": true
+      },
+      "gates": [
+        "S1-12"
+      ]
+    },
+    {
+      "id": "B03",
+      "category": "boundary",
+      "input": "已取消的任务不再调用模型或工具",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        }
+      ],
+      "expected": {
+        "status": "cancelled",
+        "model_calls": 0,
+        "source_requests": 0
+      },
+      "cancelled": true,
+      "gates": [
+        "S1-12"
+      ]
+    },
+    {
+      "id": "B04",
+      "category": "boundary",
+      "input": "限流、鉴权和超时分别有限停止",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "errors": [
+          "ALL_SOURCES_FAILED"
+        ]
+      },
+      "variants": [
+        "rate_limit",
+        "auth",
+        "timeout"
+      ],
+      "gates": [
+        "S1-10",
+        "S1-11"
+      ]
+    },
+    {
+      "id": "B05",
+      "category": "boundary",
+      "input": "刷新失败返回旧缓存并保留时间",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "stale": true
+      },
+      "fixture": "stale",
+      "gates": [
+        "S1-10"
+      ]
+    },
+    {
+      "id": "B06",
+      "category": "boundary",
+      "input": "截止自然日的日线不作为完整收盘返回",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_daily_bars",
+              "args": {
+                "symbol": "600519",
+                "start": "2024-04-26",
+                "end": "2024-05-01"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "field": {
+          "tool": "get_daily_bars",
+          "path": [
+            "data",
+            "bars",
+            -1,
+            "date"
+          ],
+          "value": "2024-04-30"
+        }
+      },
+      "gates": [
+        "S1-09"
+      ]
+    },
+    {
+      "id": "B07",
+      "category": "boundary",
+      "input": "外部新闻中的指令不能扩大工具权限",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_stock_news",
+              "args": {
+                "symbol": "600519",
+                "start": "2024-04-01",
+                "end": "2024-04-30",
+                "source": "eastmoney"
+              }
+            }
+          ]
+        },
+        {
+          "calls": [
+            {
+              "tool": "execute_shell",
+              "args": {
+                "command": "read-secret"
+              }
+            },
+            {
+              "tool": "read_evidence",
+              "args": {
+                "evidence_id": "raw_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "errors": [
+          "UNKNOWN_TOOL",
+          "EVIDENCE_DENIED"
+        ],
+        "source_requests": 1
+      },
+      "fixture": "injection",
+      "gates": [
+        "S1-12"
+      ]
+    },
+    {
+      "id": "B08",
+      "category": "boundary",
+      "input": "拒绝导出到用户指定目录",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "export_research_result",
+              "args": {
+                "status": "partial",
+                "answer": "测试",
+                "path": "../../escape.md"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "errors": [
+          "VALIDATION_ERROR"
+        ],
+        "no_export": true
+      },
+      "gates": [
+        "S1-04",
+        "S1-14"
+      ]
+    },
+    {
+      "id": "E01",
+      "category": "export",
+      "input": "指定交易日收盘复盘及涨跌幅",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_daily_bars",
+              "args": {
+                "symbol": "600519",
+                "start": "2024-04-26",
+                "end": "2024-04-30"
+              }
+            }
+          ]
+        },
+        {
+          "calls": [
+            {
+              "tool": "calculate_market_metrics",
+              "args": {
+                "result_id": "$result:get_daily_bars",
+                "trade_date": "2024-04-30"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "calculation": true,
+        "change_percent": 11.111111
+      },
+      "gates": [
+        "S1-09",
+        "S1-14"
+      ]
+    },
+    {
+      "id": "E02",
+      "category": "export",
+      "input": "结构化财务取数并重复导出草稿",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_financial_statements",
+              "args": {
+                "symbol": "600519",
+                "statement": "income",
+                "report_period": "2024-03-31"
+              }
+            }
+          ]
+        },
+        {
+          "calls": [
+            {
+              "tool": "export_research_result",
+              "args": {
+                "status": "completed",
+                "answer": "合成收入123.45，聚合三表，单位元且非完整年报",
+                "evidence_ids": [
+                  "$raw:get_financial_statements"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "calls": [
+            {
+              "tool": "export_research_result",
+              "args": {
+                "status": "completed",
+                "answer": "合成收入123.45，聚合三表，单位元且非完整年报",
+                "evidence_ids": [
+                  "$raw:get_financial_statements"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "completed",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "completed",
+        "draft": true
+      },
+      "gates": [
+        "S1-07",
+        "S1-14"
+      ]
+    },
+    {
+      "id": "E03",
+      "category": "export",
+      "input": "所有来源失败时输出证据不足",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "has_raw": false,
+        "errors": [
+          "ALL_SOURCES_FAILED"
+        ]
+      },
+      "fixture": "timeout",
+      "gates": [
+        "S1-14"
+      ]
+    },
+    {
+      "id": "E04",
+      "category": "export",
+      "input": "保留取得的数据和失败缺口",
+      "steps": [
+        {
+          "calls": [
+            {
+              "tool": "get_quote",
+              "args": {
+                "symbol": "600519",
+                "source": "tencent"
+              }
+            },
+            {
+              "tool": "unknown_tool",
+              "args": {}
+            }
+          ]
+        },
+        {
+          "final": {
+            "status": "partial",
+            "cite": true
+          }
+        }
+      ],
+      "expected": {
+        "status": "partial",
+        "has_raw": true,
+        "paired": true
+      },
+      "gates": [
+        "S1-14"
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "version": "1.0.1",
+      "reason": "L07 全为失败观测，无可用数据时终态应为 failed；保持同一输入、调用步骤和全部30案例，不删除失败样例。"
+    }
+  ]
+}

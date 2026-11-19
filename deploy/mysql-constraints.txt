@@ -1,0 +1,8 @@
+# Versions exercised by the 2026-11-15 MySQL migration validation.
+SQLAlchemy==2.0.57
+PyMySQL==1.2.4
+alembic==1.20.1
+greenlet==3.5.6
+cryptography==50.0.2
+Mako==1.4.3
+MarkupSafe==3.0.4

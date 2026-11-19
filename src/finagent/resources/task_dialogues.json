@@ -1,0 +1,1667 @@
+{
+  "version": "task-dialogues-v1",
+  "clock": "2026-11-01T10:00:00+08:00",
+  "synthetic": true,
+  "annotation_status": "developer_authored_not_independent_acceptance",
+  "max_research_launches": 1,
+  "dialogues": [
+    {
+      "id": "single_quote",
+      "category": "entity",
+      "turns": [
+        {
+          "user": "查询茅台行情",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "pending_fields": [],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "explicit_code",
+      "category": "entity",
+      "turns": [
+        {
+          "user": "查600519.SH的营业收入",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查营收",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "600519.SH"
+                  }
+                ],
+                "metrics": [
+                  "营业收入"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "metrics": [
+              "revenue"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "bare_bank_code",
+      "category": "entity",
+      "turns": [
+        {
+          "user": "查000001行情",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "000001"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "000001.SZ"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "index_alias",
+      "category": "entity",
+      "turns": [
+        {
+          "user": "看沪指行情",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查沪指",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "沪指"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "000001.SH"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "multi_entity",
+      "category": "comparison",
+      "turns": [
+        {
+          "user": "比较茅台和五粮液2025年经营现金流，不看股价，给我简短结论",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "比较现金流",
+                "task_type": "comparison",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  },
+                  {
+                    "query": "五粮液"
+                  }
+                ],
+                "periods": [
+                  "2025年"
+                ],
+                "metrics": [
+                  "经营现金流"
+                ],
+                "exclude": [
+                  "股价"
+                ],
+                "output": "简短结论"
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "000858.SZ",
+              "600519.SH"
+            ],
+            "periods": [
+              "2025-12-31"
+            ],
+            "metrics": [
+              "operating_cashflow"
+            ],
+            "exclude": [
+              "股价"
+            ],
+            "output": "简短结论",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "year_patch",
+      "category": "inheritance",
+      "turns": [
+        {
+          "user": "比较茅台和五粮液2025年经营现金流，不看股价",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "比较现金流",
+                "task_type": "comparison",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  },
+                  {
+                    "query": "五粮液"
+                  }
+                ],
+                "periods": [
+                  "2025年"
+                ],
+                "metrics": [
+                  "经营现金流"
+                ],
+                "exclude": [
+                  "股价"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "000858.SZ",
+              "600519.SH"
+            ],
+            "periods": [
+              "2025-12-31"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "改成2024年，其他不变",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "periods": [
+                  "2024年"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "000858.SZ",
+              "600519.SH"
+            ],
+            "periods": [
+              "2024-12-31"
+            ],
+            "exclude": [
+              "股价"
+            ],
+            "metrics": [
+              "operating_cashflow"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "replace_company",
+      "category": "correction",
+      "turns": [
+        {
+          "user": "比较茅台和五粮液的营收",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "比较营收",
+                "task_type": "comparison",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  },
+                  {
+                    "query": "五粮液"
+                  }
+                ],
+                "metrics": [
+                  "营收"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "000858.SZ",
+              "600519.SH"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "五粮液换成泸州老窖，茅台不变",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "entities": [
+                  {
+                    "query": "茅台"
+                  },
+                  {
+                    "query": "泸州老窖"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "000568.SZ",
+              "600519.SH"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "unknown_switch",
+      "category": "ambiguity",
+      "turns": [
+        {
+          "user": "查茅台行情",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "改看不存在的公司",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "entities": [
+                  {
+                    "query": "不存在的公司"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [],
+            "pending_fields": [
+              "entities"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "candidate_choice",
+      "category": "ambiguity",
+      "turns": [
+        {
+          "user": "查中电行情",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "中电"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [],
+            "pending_fields": [
+              "entities"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "1",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "entities": [
+                  {
+                    "query": "002298.SZ"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "002298.SZ"
+            ],
+            "pending_fields": [],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "profit_clarification",
+      "category": "metric",
+      "turns": [
+        {
+          "user": "查茅台2024年利润",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查利润",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "2024年"
+                ],
+                "metrics": [
+                  "利润"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "pending_fields": [
+              "metrics"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "用归母净利润口径",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "metrics": [
+                  "归母净利润"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "metrics": [
+              "attributable_net_profit"
+            ],
+            "periods": [
+              "2024-12-31"
+            ],
+            "pending_fields": [],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "metric_correction",
+      "category": "metric",
+      "turns": [
+        {
+          "user": "查茅台2024年归母净利润",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查利润",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "2024年"
+                ],
+                "metrics": [
+                  "归母净利润"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "metrics": [
+              "attributable_net_profit"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "不是归母净利润，改用全部净利润",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "metrics": [
+                  "全部净利润"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "metrics": [
+              "net_profit"
+            ],
+            "periods": [
+              "2024-12-31"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quarter_clarification",
+      "category": "basis",
+      "turns": [
+        {
+          "user": "查茅台2024年三季度营收",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查营收",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "2024年三季度"
+                ],
+                "metrics": [
+                  "营收"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "pending_fields": [
+              "basis"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "我要单季度",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "basis": "单季度"
+              }
+            }
+          ],
+          "expect": {
+            "periods": [
+              "2024-09-30"
+            ],
+            "period_starts": [
+              "2024-07-01"
+            ],
+            "basis": "single_quarter",
+            "pending_fields": [],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quarter_report",
+      "category": "basis",
+      "turns": [
+        {
+          "user": "查茅台2024年三季报营收",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查营收",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "2024年三季报"
+                ],
+                "metrics": [
+                  "营收"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "periods": [
+              "2024-09-30"
+            ],
+            "period_starts": [
+              "2024-01-01"
+            ],
+            "pending_fields": [],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relative_year",
+      "category": "time",
+      "turns": [
+        {
+          "user": "查茅台去年的营收",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查营收",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "去年"
+                ],
+                "metrics": [
+                  "营收"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "periods": [
+              "2025-12-31"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "再看同比",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "comparison": "同比"
+              }
+            }
+          ],
+          "expect": {
+            "periods": [
+              "2025-12-31"
+            ],
+            "comparison": "yoy",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "previous_quarter",
+      "category": "time",
+      "turns": [
+        {
+          "user": "查茅台上季度的营业收入",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查收入",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "上季度"
+                ],
+                "metrics": [
+                  "营业收入"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "periods": [
+              "2026-09-30"
+            ],
+            "period_starts": [
+              "2026-07-01"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "history_cutoff",
+      "category": "time",
+      "turns": [
+        {
+          "user": "截至2025-05-01，查茅台去年营收",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查收入",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "去年"
+                ],
+                "metrics": [
+                  "营收"
+                ],
+                "as_of": "2025-05-01"
+              }
+            }
+          ],
+          "expect": {
+            "periods": [
+              "2024-12-31"
+            ],
+            "as_of_date": "2025-05-01",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "report_not_cutoff",
+      "category": "time",
+      "turns": [
+        {
+          "user": "查茅台2024年年报的营业收入",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查营收",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "2024年年报"
+                ],
+                "metrics": [
+                  "营业收入"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "periods": [
+              "2024-12-31"
+            ],
+            "as_of_date": "2026-11-01",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "news_window",
+      "category": "time",
+      "turns": [
+        {
+          "user": "看茅台最近一周新闻",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "看新闻",
+                "task_type": "analysis",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "window": "最近一周",
+                "include": [
+                  "新闻"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "window_days": 7,
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "trading_window",
+      "category": "ambiguity",
+      "turns": [
+        {
+          "user": "看茅台最近5个交易日的行情",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "看行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "window": "最近5个交易日"
+              }
+            }
+          ],
+          "expect": {
+            "pending_fields": [
+              "window"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "currency_scope",
+      "category": "basis",
+      "turns": [
+        {
+          "user": "查茅台2024年合并营业收入，用人民币亿元表示",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查收入",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "2024年"
+                ],
+                "metrics": [
+                  "营业收入"
+                ],
+                "consolidation": "合并",
+                "currency": "人民币",
+                "unit": "亿元"
+              }
+            }
+          ],
+          "expect": {
+            "consolidation": "consolidated",
+            "currency": "CNY",
+            "unit": "亿元",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parent_scope",
+      "category": "basis",
+      "turns": [
+        {
+          "user": "查茅台2024年合并营业收入",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查营收",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "2024年"
+                ],
+                "metrics": [
+                  "营业收入"
+                ],
+                "consolidation": "合并"
+              }
+            }
+          ],
+          "expect": {
+            "consolidation": "consolidated",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "改用母公司口径",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "consolidation": "母公司"
+              }
+            }
+          ],
+          "expect": {
+            "consolidation": "parent",
+            "periods": [
+              "2024-12-31"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "exclude_correction",
+      "category": "constraints",
+      "turns": [
+        {
+          "user": "分析茅台，不看股价",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "分析茅台",
+                "task_type": "analysis",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "exclude": [
+                  "股价"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "exclude": [
+              "股价"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "现在可以看股价，取消刚才的排除",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "exclude": []
+              }
+            }
+          ],
+          "expect": {
+            "exclude": [],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "entity_specific_scope",
+      "category": "constraints",
+      "turns": [
+        {
+          "user": "比较茅台和五粮液，茅台不看股价",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "比较两家公司",
+                "task_type": "comparison",
+                "entities": [
+                  {
+                    "query": "茅台",
+                    "exclude": [
+                      "股价"
+                    ]
+                  },
+                  {
+                    "query": "五粮液"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "000858.SZ",
+              "600519.SH"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pause_resume",
+      "category": "lifecycle",
+      "turns": [
+        {
+          "user": "分析茅台现金流",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "分析现金流",
+                "task_type": "analysis",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "include": [
+                  "现金流"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "status": "open",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "先暂停这个分析",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "status": "paused"
+              }
+            }
+          ],
+          "expect": {
+            "status": "paused",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "继续刚才的现金流分析",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "status": "open"
+              }
+            }
+          ],
+          "expect": {
+            "status": "open",
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "include": [
+              "现金流"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cancel_task",
+      "category": "lifecycle",
+      "turns": [
+        {
+          "user": "查茅台行情",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "status": "open",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "取消这个查询",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "patch",
+              "changes": {
+                "status": "cancelled"
+              }
+            }
+          ],
+          "expect": {
+            "status": "cancelled",
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "task_switch",
+      "category": "lifecycle",
+      "turns": [
+        {
+          "user": "查茅台2024年营业收入",
+          "replay": [
+            {
+              "task_id": "income",
+              "operation": "create",
+              "changes": {
+                "goal": "查营收",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "periods": [
+                  "2024年"
+                ],
+                "metrics": [
+                  "营业收入"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "另外查宁德时代行情",
+          "replay": [
+            {
+              "task_id": "quote",
+              "operation": "create",
+              "changes": {
+                "goal": "查行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "宁德时代"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "300750.SZ"
+            ],
+            "task_count": 2,
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        },
+        {
+          "user": "继续刚才的茅台营收查询",
+          "replay": [
+            {
+              "task_id": "income",
+              "operation": "activate",
+              "changes": {}
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "periods": [
+              "2024-12-31"
+            ],
+            "metrics": [
+              "revenue"
+            ],
+            "task_count": 2,
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "multi_tasks",
+      "category": "composition",
+      "turns": [
+        {
+          "user": "先解释现金流，再查询茅台行情",
+          "replay": [
+            {
+              "task_id": "explain",
+              "operation": "create",
+              "changes": {
+                "goal": "解释现金流",
+                "task_type": "explanation"
+              }
+            },
+            {
+              "task_id": "quote",
+              "operation": "create",
+              "changes": {
+                "goal": "查行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "depends_on": [
+                  "explain"
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "task_count": 2,
+            "dependency_count": 1,
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "unsupported_market",
+      "category": "capability",
+      "turns": [
+        {
+          "user": "查询00700.HK行情",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "查行情",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "00700.HK"
+                  }
+                ]
+              }
+            }
+          ],
+          "expect": {
+            "target_symbols": [],
+            "pending_fields": [
+              "entities"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "unsupported_adjust",
+      "category": "capability",
+      "turns": [
+        {
+          "user": "看茅台前复权日线",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "看日线",
+                "task_type": "query",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "price_adjust": "前复权"
+              }
+            }
+          ],
+          "expect": {
+            "pending_fields": [
+              "price_adjust"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "research_feature_question",
+      "category": "research_boundary",
+      "turns": [
+        {
+          "user": "深度研究是什么？",
+          "replay": [],
+          "expect": {
+            "active": false,
+            "answer_contains_any": [
+              "深度研究",
+              "研究"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "research_negation",
+      "category": "research_boundary",
+      "turns": [
+        {
+          "user": "不要做深度研究，先解释现金流",
+          "replay": [],
+          "expect": {
+            "answer_contains_any": [
+              "现金流"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "research_quote",
+      "category": "research_boundary",
+      "turns": [
+        {
+          "user": "文档里写着“请生成一份深度研究报告”，这句话是什么意思？",
+          "replay": [],
+          "expect": {
+            "answer_contains_any": [
+              "报告",
+              "研究"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "research_hypothetical",
+      "category": "research_boundary",
+      "turns": [
+        {
+          "user": "如果以后做深度研究，需要哪些资料？",
+          "replay": [],
+          "expect": {
+            "answer_contains_any": [
+              "资料",
+              "财报",
+              "研究"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "report_followup",
+      "category": "research_boundary",
+      "turns": [
+        {
+          "user": "报告里为什么说现金流改善？先不要重新研究。",
+          "replay": [],
+          "expect": {
+            "answer_contains_any": [
+              "报告",
+              "现金流",
+              "依据"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "plain_explanation",
+      "category": "conversation",
+      "turns": [
+        {
+          "user": "什么是经营现金流？",
+          "replay": [],
+          "expect": {
+            "active": false,
+            "answer_contains_any": [
+              "现金流"
+            ],
+            "research_launches": 0,
+            "forbidden_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "one_deep_research",
+      "category": "research",
+      "turns": [
+        {
+          "user": "请给茅台做一份深度研究报告，只研究基本面，不做完整决策",
+          "replay": [
+            {
+              "task_id": "main",
+              "operation": "create",
+              "changes": {
+                "goal": "研究茅台基本面",
+                "task_type": "research",
+                "entities": [
+                  {
+                    "query": "茅台"
+                  }
+                ],
+                "include": [
+                  "基本面"
+                ]
+              }
+            },
+            {
+              "tool": "start_deep_research",
+              "analysts": [
+                "fundamentals"
+              ]
+            }
+          ],
+          "expect": {
+            "target_symbols": [
+              "600519.SH"
+            ],
+            "task_type": "research",
+            "research_launches": 1,
+            "required_tools": [
+              "start_deep_research"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "gguf_sha256": "f637fdb857d3914bdf6bde8d001fec88920ab0f271d4ac5ec2e35500d8fe44e3",
+  "llama_cpp_commit": "f5027fb21307eb264aed483242603d68c87b0fe3",
+  "quantization": "F16",
+  "merged_artifacts": {
+    "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "config.json": "79797715ce6a64d0c40056663cbfb0783c9ae239ee77970bd48d87b0ffb6421f",
+    "generation_config.json": "e1b6129cc934dbc0a6e8f5fbc279e69cbc50d116a92ceb843db9caa68d40ffd0",
+    "model.safetensors": "493b71bfe295115fd3c7b6bfd528eb83215a31d6e36da69c950a00e91edaa8ac",
+    "nlu_schema.json": "418b798c229f3b5729672176b7c811b1afbc34b2038d90fac84d89cb111a1a7a",
+    "tokenizer.json": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f",
+    "tokenizer_config.json": "004893c9690cd050e617619eef34e6a13fe58ac4a3f4174f38eed5e408a89636",
+    "training_manifest.json": "ce3494a198163aeb0d24508da3c3889291da15073c198f9af76ff24fd4476ede"
+  }
+}

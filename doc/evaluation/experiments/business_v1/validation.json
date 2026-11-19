@@ -1,0 +1,49 @@
+{
+  "implementation_digest": "d5f6b6946363c19539a024ea01565f84788f913639cc11f5cdb48b33fbc78903",
+  "regression_tests": {
+    "passed": 540,
+    "failed": 0
+  },
+  "dataset": {
+    "version": "business-benchmark-v1.1",
+    "dialogues": 48,
+    "turns": 69,
+    "development": 30,
+    "holdout": 18,
+    "annotation_status": "developer_candidate_pending_human_review"
+  },
+  "live_pilot": {
+    "original_dataset": "business-benchmark-v1",
+    "unique_development_dialogues": 3,
+    "arms": 3,
+    "dialogue_runs": 9,
+    "turns": 15,
+    "model_calls": 34,
+    "token_usage": {
+      "prompt_tokens": 296392,
+      "completion_tokens": 8278
+    },
+    "new_real_research_launches": 0,
+    "all_three_arms_succeeded_on_these_cases": true,
+    "evidence_of_accuracy_improvement": false,
+    "pilot_cases_unchanged_in_v1_1": true
+  },
+  "source_archive_and_request_capture": "enabled_for_future_runs; original pilot limitations retained",
+  "holdout": {
+    "run": false,
+    "retrieval_results_inspected": false,
+    "review_materials": "holdout_delivery/"
+  },
+  "wheel": {
+    "build": "passed",
+    "isolated_import": "passed",
+    "source_digest_matches": true
+  },
+  "analysis": {
+    "additional_model_calls": 0,
+    "posthoc": true,
+    "directory": "analysis_delivery/"
+  },
+  "public_snapshot": "doc/experiments/business_v1/",
+  "resume_effect_claim_eligible": false
+}

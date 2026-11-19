@@ -1,0 +1,31 @@
+{
+  "dataset_hash": "caf24ed07648eca8b0b1c5ff3ff2cbe888b75a12962ce87ca3cea719f30d59e1",
+  "split": "development",
+  "label_status": "developer_candidate",
+  "methods": {
+    "keyword": {
+      "recall_at_1": 0.75,
+      "recall_at_3": 0.8333333333333334,
+      "recall_at_5": 0.8333333333333334,
+      "mrr": 0.7916666666666666,
+      "ndcg_at_5": 0.8025774794642881,
+      "queries": 36,
+      "latency_p50_seconds": 0.0004247254692018032
+    },
+    "bm25_expansion": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_5": 1.0,
+      "queries": 36,
+      "latency_p50_seconds": 0.0006267539574764669
+    }
+  },
+  "model_calls": 0,
+  "limitations": [
+    "语料和同义词均为开发阶段编写；不作为独立泛化效果。",
+    "增强方法是稀疏BM25加规则扩展，不是向量或神经重排。",
+    "相关单元是包含目标指标的原始表格；文本副本未作为另一个正确表格计分。"
+  ]
+}

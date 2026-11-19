@@ -1,0 +1,4020 @@
+{
+  "version": "business-benchmark-v1",
+  "clock": "2026-11-01T10:00:00+08:00",
+  "synthetic": true,
+  "annotation_status": "developer_candidate_not_independent_human_acceptance",
+  "split_policy": "group_and_company_disjoint",
+  "real_research_policy": "disabled_reuse_prior_record_only",
+  "dialogues": [
+    {
+      "id": "development_600519_lookup",
+      "group_id": "development_600519.SH_lookup",
+      "split": "development",
+      "category": "lookup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查询贵州茅台2024年营业收入，引用原文。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_year_correction",
+      "group_id": "development_600519.SH_year_correction",
+      "split": "development",
+      "category": "year_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查询贵州茅台2025年营业收入。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2025-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "改成2024年，其他条件保留。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_profit_clarification",
+      "group_id": "development_600519.SH_profit_clarification",
+      "split": "development",
+      "category": "profit_clarification",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查贵州茅台2024年利润。",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "profit_basis"
+          }
+        },
+        {
+          "user": "我指归母净利润，请给原文依据。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "attributable_net_profit",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_company_correction",
+      "group_id": "development_600519.SH_company_correction",
+      "split": "development",
+      "category": "company_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "给出贵州茅台2024年经营现金流。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "公司换成宁德时代，期间和指标照旧。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_comparison",
+      "group_id": "development_600519.SH_comparison",
+      "split": "development",
+      "category": "comparison",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "比较贵州茅台和宁德时代2024年营业收入，只列金额和来源。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ",
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              },
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_growth",
+      "group_id": "development_600519.SH_growth",
+      "split": "development",
+      "category": "growth",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "计算贵州茅台2025年营业收入同比增长率，附上两期原文。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue_yoy"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2025-12-31",
+                "metric": "revenue_yoy",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_consolidation_correction",
+      "group_id": "development_600519.SH_consolidation_correction",
+      "split": "development",
+      "category": "consolidation_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024,
+          "scope": "parent"
+        }
+      ],
+      "turns": [
+        {
+          "user": "查贵州茅台2024年合并营业收入。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "改用母公司口径，其他不变。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "parent",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "parent",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_quarter",
+      "group_id": "development_600519.SH_quarter",
+      "split": "development",
+      "category": "quarter",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024,
+          "basis": "quarter"
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024,
+          "basis": "ytd"
+        }
+      ],
+      "turns": [
+        {
+          "user": "查贵州茅台2024年三季度营收。",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "period_basis"
+          }
+        },
+        {
+          "user": "要第三季度单季度，不是前三季度累计。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-09-30"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "quarter",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-09-30",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "quarter"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_missing",
+      "group_id": "development_600519.SH_missing",
+      "split": "development",
+      "category": "missing",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "给贵州茅台2024年归母净利润，资料没有就直说。",
+          "gold": {
+            "action": "unavailable",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_600519_exclusion",
+      "group_id": "development_600519.SH_exclusion",
+      "split": "development",
+      "category": "exclusion",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "600519.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "只查贵州茅台2024年经营现金流，不看股价。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": [
+                "price"
+              ]
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_lookup",
+      "group_id": "development_300750.SZ_lookup",
+      "split": "development",
+      "category": "lookup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查询宁德时代2024年营业收入，引用原文。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_year_correction",
+      "group_id": "development_300750.SZ_year_correction",
+      "split": "development",
+      "category": "year_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查询宁德时代2025年营业收入。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2025-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "改成2024年，其他条件保留。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_profit_clarification",
+      "group_id": "development_300750.SZ_profit_clarification",
+      "split": "development",
+      "category": "profit_clarification",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查宁德时代2024年利润。",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "profit_basis"
+          }
+        },
+        {
+          "user": "我指归母净利润，请给原文依据。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "attributable_net_profit",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_company_correction",
+      "group_id": "development_300750.SZ_company_correction",
+      "split": "development",
+      "category": "company_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "给出宁德时代2024年经营现金流。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "公司换成格力电器，期间和指标照旧。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_comparison",
+      "group_id": "development_300750.SZ_comparison",
+      "split": "development",
+      "category": "comparison",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "比较宁德时代和格力电器2024年营业收入，只列金额和来源。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ",
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              },
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_growth",
+      "group_id": "development_300750.SZ_growth",
+      "split": "development",
+      "category": "growth",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "计算宁德时代2025年营业收入同比增长率，附上两期原文。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue_yoy"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2025-12-31",
+                "metric": "revenue_yoy",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_consolidation_correction",
+      "group_id": "development_300750.SZ_consolidation_correction",
+      "split": "development",
+      "category": "consolidation_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024,
+          "scope": "parent"
+        }
+      ],
+      "turns": [
+        {
+          "user": "查宁德时代2024年合并营业收入。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "改用母公司口径，其他不变。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "parent",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "parent",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_quarter",
+      "group_id": "development_300750.SZ_quarter",
+      "split": "development",
+      "category": "quarter",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024,
+          "basis": "quarter"
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024,
+          "basis": "ytd"
+        }
+      ],
+      "turns": [
+        {
+          "user": "查宁德时代2024年三季度营收。",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "period_basis"
+          }
+        },
+        {
+          "user": "要第三季度单季度，不是前三季度累计。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-09-30"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "quarter",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-09-30",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "quarter"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_missing",
+      "group_id": "development_300750.SZ_missing",
+      "split": "development",
+      "category": "missing",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "给宁德时代2024年归母净利润，资料没有就直说。",
+          "gold": {
+            "action": "unavailable",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_300750_exclusion",
+      "group_id": "development_300750.SZ_exclusion",
+      "split": "development",
+      "category": "exclusion",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "300750.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "300750.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "只查宁德时代2024年经营现金流，不看股价。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "300750.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": [
+                "price"
+              ]
+            },
+            "claims": [
+              {
+                "symbol": "300750.SZ",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_lookup",
+      "group_id": "development_000651.SZ_lookup",
+      "split": "development",
+      "category": "lookup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查询格力电器2024年营业收入，引用原文。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_year_correction",
+      "group_id": "development_000651.SZ_year_correction",
+      "split": "development",
+      "category": "year_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查询格力电器2025年营业收入。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2025-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "改成2024年，其他条件保留。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_profit_clarification",
+      "group_id": "development_000651.SZ_profit_clarification",
+      "split": "development",
+      "category": "profit_clarification",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "查格力电器2024年利润。",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "profit_basis"
+          }
+        },
+        {
+          "user": "我指归母净利润，请给原文依据。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "attributable_net_profit",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_company_correction",
+      "group_id": "development_000651.SZ_company_correction",
+      "split": "development",
+      "category": "company_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "给出格力电器2024年经营现金流。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "公司换成贵州茅台，期间和指标照旧。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_comparison",
+      "group_id": "development_000651.SZ_comparison",
+      "split": "development",
+      "category": "comparison",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "600519.SH",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "比较格力电器和贵州茅台2024年营业收入，只列金额和来源。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ",
+                "600519.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              },
+              {
+                "symbol": "600519.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_growth",
+      "group_id": "development_000651.SZ_growth",
+      "split": "development",
+      "category": "growth",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "计算格力电器2025年营业收入同比增长率，附上两期原文。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue_yoy"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2025-12-31",
+                "metric": "revenue_yoy",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_consolidation_correction",
+      "group_id": "development_000651.SZ_consolidation_correction",
+      "split": "development",
+      "category": "consolidation_correction",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024,
+          "scope": "parent"
+        }
+      ],
+      "turns": [
+        {
+          "user": "查格力电器2024年合并营业收入。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "改用母公司口径，其他不变。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "parent",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "parent",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_quarter",
+      "group_id": "development_000651.SZ_quarter",
+      "split": "development",
+      "category": "quarter",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024,
+          "basis": "quarter"
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024,
+          "basis": "ytd"
+        }
+      ],
+      "turns": [
+        {
+          "user": "查格力电器2024年三季度营收。",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "period_basis"
+          }
+        },
+        {
+          "user": "要第三季度单季度，不是前三季度累计。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-09-30"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "quarter",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-09-30",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "quarter"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_missing",
+      "group_id": "development_000651.SZ_missing",
+      "split": "development",
+      "category": "missing",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "给格力电器2024年归母净利润，资料没有就直说。",
+          "gold": {
+            "action": "unavailable",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "development_000651_exclusion",
+      "group_id": "development_000651.SZ_exclusion",
+      "split": "development",
+      "category": "exclusion",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000651.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000651.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "只查格力电器2024年经营现金流，不看股价。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000651.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": [
+                "price"
+              ]
+            },
+            "claims": [
+              {
+                "symbol": "000651.SZ",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601088_heldout_lookup",
+      "group_id": "holdout_601088.SH_heldout_lookup",
+      "split": "holdout",
+      "category": "heldout_lookup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601088.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "请从资料中摘出中国神华2024年度的营业收入，并定位到原始表格。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601088.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601088.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601088_heldout_followup",
+      "group_id": "holdout_601088.SH_heldout_followup",
+      "split": "holdout",
+      "category": "heldout_followup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601088.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "我要中国神华2025年度的营业收入金额。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601088.SH"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601088.SH",
+                "period_end": "2025-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "刚才年份说错了，应该是2024年度。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601088.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601088.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601088_heldout_profit",
+      "group_id": "holdout_601088.SH_heldout_profit",
+      "split": "holdout",
+      "category": "heldout_profit",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601088.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "中国神华2024年的利润是多少？",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "profit_basis"
+          }
+        },
+        {
+          "user": "按归属于母公司股东的净利润来回答。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601088.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601088.SH",
+                "period_end": "2024-12-31",
+                "metric": "attributable_net_profit",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601088_heldout_compare",
+      "group_id": "holdout_601088.SH_heldout_compare",
+      "split": "holdout",
+      "category": "heldout_compare",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601088.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2025
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "把中国神华与隆基绿能2024年的经营活动现金流净额放在一起列示，需来源。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601012.SH",
+                "601088.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601088.SH",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              },
+              {
+                "symbol": "601012.SH",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601088_heldout_growth",
+      "group_id": "holdout_601088.SH_heldout_growth",
+      "split": "holdout",
+      "category": "heldout_growth",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601088.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "用两份原始资料算中国神华2025年度营收较上一年的增长百分比。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601088.SH"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue_yoy"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601088.SH",
+                "period_end": "2025-12-31",
+                "metric": "revenue_yoy",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601088_heldout_missing",
+      "group_id": "holdout_601088.SH_heldout_missing",
+      "split": "holdout",
+      "category": "heldout_missing",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601088.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "资料里有中国神华2024年度净利润吗？没有请明确说明未覆盖。",
+          "gold": {
+            "action": "unavailable",
+            "request": {
+              "symbols": [
+                "601088.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601012_heldout_lookup",
+      "group_id": "holdout_601012.SH_heldout_lookup",
+      "split": "holdout",
+      "category": "heldout_lookup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601012.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "请从资料中摘出隆基绿能2024年度的营业收入，并定位到原始表格。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601012.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601012.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601012_heldout_followup",
+      "group_id": "holdout_601012.SH_heldout_followup",
+      "split": "holdout",
+      "category": "heldout_followup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601012.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "我要隆基绿能2025年度的营业收入金额。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601012.SH"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601012.SH",
+                "period_end": "2025-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "刚才年份说错了，应该是2024年度。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601012.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601012.SH",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601012_heldout_profit",
+      "group_id": "holdout_601012.SH_heldout_profit",
+      "split": "holdout",
+      "category": "heldout_profit",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601012.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "隆基绿能2024年的利润是多少？",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "profit_basis"
+          }
+        },
+        {
+          "user": "按归属于母公司股东的净利润来回答。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601012.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601012.SH",
+                "period_end": "2024-12-31",
+                "metric": "attributable_net_profit",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601012_heldout_compare",
+      "group_id": "holdout_601012.SH_heldout_compare",
+      "split": "holdout",
+      "category": "heldout_compare",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601012.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2025
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "把隆基绿能与美的集团2024年的经营活动现金流净额放在一起列示，需来源。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000333.SZ",
+                "601012.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601012.SH",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              },
+              {
+                "symbol": "000333.SZ",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601012_heldout_growth",
+      "group_id": "holdout_601012.SH_heldout_growth",
+      "split": "holdout",
+      "category": "heldout_growth",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601012.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2024
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "用两份原始资料算隆基绿能2025年度营收较上一年的增长百分比。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "601012.SH"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue_yoy"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "601012.SH",
+                "period_end": "2025-12-31",
+                "metric": "revenue_yoy",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_601012_heldout_missing",
+      "group_id": "holdout_601012.SH_heldout_missing",
+      "split": "holdout",
+      "category": "heldout_missing",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "601012.SH",
+          "year": 2023
+        },
+        {
+          "symbol": "601012.SH",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "资料里有隆基绿能2024年度净利润吗？没有请明确说明未覆盖。",
+          "gold": {
+            "action": "unavailable",
+            "request": {
+              "symbols": [
+                "601012.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_000333_heldout_lookup",
+      "group_id": "holdout_000333.SZ_heldout_lookup",
+      "split": "holdout",
+      "category": "heldout_lookup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000333.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "请从资料中摘出美的集团2024年度的营业收入，并定位到原始表格。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000333.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000333.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_000333_heldout_followup",
+      "group_id": "holdout_000333.SZ_heldout_followup",
+      "split": "holdout",
+      "category": "heldout_followup",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000333.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "我要美的集团2025年度的营业收入金额。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000333.SZ"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000333.SZ",
+                "period_end": "2025-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        },
+        {
+          "user": "刚才年份说错了，应该是2024年度。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000333.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "revenue"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000333.SZ",
+                "period_end": "2024-12-31",
+                "metric": "revenue",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_000333_heldout_profit",
+      "group_id": "holdout_000333.SZ_heldout_profit",
+      "split": "holdout",
+      "category": "heldout_profit",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000333.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "美的集团2024年的利润是多少？",
+          "gold": {
+            "action": "clarify",
+            "request": null,
+            "claims": [],
+            "clarification_field": "profit_basis"
+          }
+        },
+        {
+          "user": "按归属于母公司股东的净利润来回答。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000333.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "attributable_net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000333.SZ",
+                "period_end": "2024-12-31",
+                "metric": "attributable_net_profit",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_000333_heldout_compare",
+      "group_id": "holdout_000333.SZ_heldout_compare",
+      "split": "holdout",
+      "category": "heldout_compare",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000333.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2025
+        },
+        {
+          "symbol": "601088.SH",
+          "year": 2024
+        }
+      ],
+      "turns": [
+        {
+          "user": "把美的集团与中国神华2024年的经营活动现金流净额放在一起列示，需来源。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000333.SZ",
+                "601088.SH"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "operating_cashflow"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000333.SZ",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              },
+              {
+                "symbol": "601088.SH",
+                "period_end": "2024-12-31",
+                "metric": "operating_cashflow",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_000333_heldout_growth",
+      "group_id": "holdout_000333.SZ_heldout_growth",
+      "split": "holdout",
+      "category": "heldout_growth",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000333.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2024
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "用两份原始资料算美的集团2025年度营收较上一年的增长百分比。",
+          "gold": {
+            "action": "answer",
+            "request": {
+              "symbols": [
+                "000333.SZ"
+              ],
+              "periods": [
+                "2025-12-31"
+              ],
+              "metrics": [
+                "revenue_yoy"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [
+              {
+                "symbol": "000333.SZ",
+                "period_end": "2025-12-31",
+                "metric": "revenue_yoy",
+                "scope": "consolidated",
+                "basis": "annual"
+              }
+            ],
+            "clarification_field": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "holdout_000333_heldout_missing",
+      "group_id": "holdout_000333.SZ_heldout_missing",
+      "split": "holdout",
+      "category": "heldout_missing",
+      "annotation_status": "developer_candidate",
+      "real_research": false,
+      "fixtures": [
+        {
+          "symbol": "000333.SZ",
+          "year": 2023
+        },
+        {
+          "symbol": "000333.SZ",
+          "year": 2025
+        }
+      ],
+      "turns": [
+        {
+          "user": "资料里有美的集团2024年度净利润吗？没有请明确说明未覆盖。",
+          "gold": {
+            "action": "unavailable",
+            "request": {
+              "symbols": [
+                "000333.SZ"
+              ],
+              "periods": [
+                "2024-12-31"
+              ],
+              "metrics": [
+                "net_profit"
+              ],
+              "scope": "consolidated",
+              "basis": "annual",
+              "currency": "CNY",
+              "unit": "元",
+              "exclude": []
+            },
+            "claims": [],
+            "clarification_field": null
+          }
+        }
+      ]
+    }
+  ],
+  "retrieval_queries": [
+    {
+      "id": "retrieval_600519_revenue_0",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "营业收入",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_revenue_1",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "卖货收入",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_net_profit_0",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "净利润",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_net_profit_1",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "税后赚了多少",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_attributable_net_profit_0",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "归母净利润",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_attributable_net_profit_1",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "股东应占利润",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_operating_cashflow_0",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "经营现金流",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_operating_cashflow_1",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "日常经营带来的净现金",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_total_assets_0",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "总资产",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_total_assets_1",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "资产盘子",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_total_liabilities_0",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "总负债",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_600519_total_liabilities_1",
+      "split": "development",
+      "symbol": "600519.SH",
+      "report_period": "2024-12-31",
+      "query": "债务总盘子",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_revenue_0",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "营业收入",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_revenue_1",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "卖货收入",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_net_profit_0",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "净利润",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_net_profit_1",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "税后赚了多少",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_attributable_net_profit_0",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "归母净利润",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_attributable_net_profit_1",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "股东应占利润",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_operating_cashflow_0",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "经营现金流",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_operating_cashflow_1",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "日常经营带来的净现金",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_total_assets_0",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "总资产",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_total_assets_1",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "资产盘子",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_total_liabilities_0",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "总负债",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_300750_total_liabilities_1",
+      "split": "development",
+      "symbol": "300750.SZ",
+      "report_period": "2024-12-31",
+      "query": "债务总盘子",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_revenue_0",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "营业收入",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_revenue_1",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "卖货收入",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_net_profit_0",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "净利润",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_net_profit_1",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "税后赚了多少",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_attributable_net_profit_0",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "归母净利润",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_attributable_net_profit_1",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "股东应占利润",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_operating_cashflow_0",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "经营现金流",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_operating_cashflow_1",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "日常经营带来的净现金",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_total_assets_0",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "总资产",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_total_assets_1",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "资产盘子",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_total_liabilities_0",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "总负债",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000651_total_liabilities_1",
+      "split": "development",
+      "symbol": "000651.SZ",
+      "report_period": "2024-12-31",
+      "query": "债务总盘子",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_revenue_0",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "请查营业收入科目",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_revenue_1",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "销售业务的收入金额",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_net_profit_0",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "净利润科目的期末披露值",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_net_profit_1",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "扣除所有费用及所得税后剩余的盈利",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_attributable_net_profit_0",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "归属于母公司股东的净利润科目",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_attributable_net_profit_1",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "本期应归属母公司股东的盈利",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_operating_cashflow_0",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "经营活动产生的现金流量净额",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_operating_cashflow_1",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "经营产生的净现金流入金额",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_total_assets_0",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "资产总计的账面金额",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_total_assets_1",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "企业拥有的全部资产价值",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_total_liabilities_0",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "负债合计金额",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601088_total_liabilities_1",
+      "split": "holdout",
+      "symbol": "601088.SH",
+      "report_period": "2024-12-31",
+      "query": "企业对外承担的全部债务",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_revenue_0",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "请查营业收入科目",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_revenue_1",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "销售业务的收入金额",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_net_profit_0",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "净利润科目的期末披露值",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_net_profit_1",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "扣除所有费用及所得税后剩余的盈利",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_attributable_net_profit_0",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "归属于母公司股东的净利润科目",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_attributable_net_profit_1",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "本期应归属母公司股东的盈利",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_operating_cashflow_0",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "经营活动产生的现金流量净额",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_operating_cashflow_1",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "经营产生的净现金流入金额",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_total_assets_0",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "资产总计的账面金额",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_total_assets_1",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "企业拥有的全部资产价值",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_total_liabilities_0",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "负债合计金额",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_601012_total_liabilities_1",
+      "split": "holdout",
+      "symbol": "601012.SH",
+      "report_period": "2024-12-31",
+      "query": "企业对外承担的全部债务",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_revenue_0",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "请查营业收入科目",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_revenue_1",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "销售业务的收入金额",
+      "relevant_metric": "revenue",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_net_profit_0",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "净利润科目的期末披露值",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_net_profit_1",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "扣除所有费用及所得税后剩余的盈利",
+      "relevant_metric": "net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_attributable_net_profit_0",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "归属于母公司股东的净利润科目",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_attributable_net_profit_1",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "本期应归属母公司股东的盈利",
+      "relevant_metric": "attributable_net_profit",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_operating_cashflow_0",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "经营活动产生的现金流量净额",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_operating_cashflow_1",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "经营产生的净现金流入金额",
+      "relevant_metric": "operating_cashflow",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_total_assets_0",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "资产总计的账面金额",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_total_assets_1",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "企业拥有的全部资产价值",
+      "relevant_metric": "total_assets",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_total_liabilities_0",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "负债合计金额",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    },
+    {
+      "id": "retrieval_000333_total_liabilities_1",
+      "split": "holdout",
+      "symbol": "000333.SZ",
+      "report_period": "2024-12-31",
+      "query": "企业对外承担的全部债务",
+      "relevant_metric": "total_liabilities",
+      "scope": "consolidated",
+      "basis": "annual",
+      "grade": "developer_candidate"
+    }
+  ]
+}

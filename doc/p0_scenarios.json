@@ -1,0 +1,718 @@
+{
+  "version": "p0-development-v1",
+  "synthetic": true,
+  "chinese_multiturn": [
+    {
+      "id": "CN01",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询贵州茅台2024年报营业收入",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN02",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成贵州茅台",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN03",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN04",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询宁德时代2024年报营业收入",
+      "expected": {
+        "symbol": "300750.SZ",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN05",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成宁德时代",
+      "expected": {
+        "symbol": "300750.SZ",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN06",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN07",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询美的集团2024年报营业收入",
+      "expected": {
+        "symbol": "000333.SZ",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN08",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成美的集团",
+      "expected": {
+        "symbol": "000333.SZ",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN09",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN10",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询海尔智家2024年报营业收入",
+      "expected": {
+        "symbol": "600690.SH",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN11",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成海尔智家",
+      "expected": {
+        "symbol": "600690.SH",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN12",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN13",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询格力电器2024年报营业收入",
+      "expected": {
+        "symbol": "000651.SZ",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN14",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成格力电器",
+      "expected": {
+        "symbol": "000651.SZ",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN15",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN16",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询立讯精密2024年报营业收入",
+      "expected": {
+        "symbol": "002475.SZ",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN17",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成立讯精密",
+      "expected": {
+        "symbol": "002475.SZ",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN18",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN19",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询中国神华2024年报营业收入",
+      "expected": {
+        "symbol": "601088.SH",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN20",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成中国神华",
+      "expected": {
+        "symbol": "601088.SH",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN21",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN22",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询隆基绿能2024年报营业收入",
+      "expected": {
+        "symbol": "601012.SH",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN23",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成隆基绿能",
+      "expected": {
+        "symbol": "601012.SH",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN24",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN25",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询三一重工2024年报营业收入",
+      "expected": {
+        "symbol": "600031.SH",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN26",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成三一重工",
+      "expected": {
+        "symbol": "600031.SH",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN27",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN28",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "查询汇川技术2024年报营业收入",
+      "expected": {
+        "symbol": "300124.SZ",
+        "report_period": "2024-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN29",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "换成汇川技术",
+      "expected": {
+        "symbol": "300124.SZ",
+        "report_period": "2023-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN30",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2023-12-31",
+      "question": "那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2022-12-31",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN31",
+      "prior_symbol": "600519.SH",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "600519.SH",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN32",
+      "prior_symbol": "300750.SZ",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "300750.SZ",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN33",
+      "prior_symbol": "000333.SZ",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "000333.SZ",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN34",
+      "prior_symbol": "600690.SH",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "600690.SH",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN35",
+      "prior_symbol": "000651.SZ",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "000651.SZ",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN36",
+      "prior_symbol": "002475.SZ",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "002475.SZ",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN37",
+      "prior_symbol": "601088.SH",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "601088.SH",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN38",
+      "prior_symbol": "601012.SH",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "601012.SH",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN39",
+      "prior_symbol": "600031.SH",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "600031.SH",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "CN40",
+      "prior_symbol": "300124.SZ",
+      "prior_period": "2024-06-30",
+      "question": "该公司那上一年呢",
+      "expected": {
+        "symbol": "300124.SZ",
+        "report_period": "2023-06-30",
+        "evidence_count": 0
+      }
+    }
+  ],
+  "market_calendar": [
+    {
+      "id": "MK01",
+      "requested": "2024-02-09",
+      "as_of": "2024-02-09T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK02",
+      "requested": "2024-02-10",
+      "as_of": "2024-02-10T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK03",
+      "requested": "2024-02-11",
+      "as_of": "2024-02-11T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK04",
+      "requested": "2024-02-12",
+      "as_of": "2024-02-12T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK05",
+      "requested": "2024-02-13",
+      "as_of": "2024-02-13T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK06",
+      "requested": "2024-02-14",
+      "as_of": "2024-02-14T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK07",
+      "requested": "2024-02-15",
+      "as_of": "2024-02-15T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK08",
+      "requested": "2024-02-16",
+      "as_of": "2024-02-16T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK09",
+      "requested": "2024-02-17",
+      "as_of": "2024-02-17T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK10",
+      "requested": "2024-02-18",
+      "as_of": "2024-02-18T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-02-08",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK11",
+      "requested": "2024-04-04",
+      "as_of": "2024-04-04T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-03",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK12",
+      "requested": "2024-04-05",
+      "as_of": "2024-04-05T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-03",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK13",
+      "requested": "2024-04-06",
+      "as_of": "2024-04-06T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-03",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK14",
+      "requested": "2024-04-07",
+      "as_of": "2024-04-07T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-03",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK15",
+      "requested": "2024-05-01",
+      "as_of": "2024-05-01T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK16",
+      "requested": "2024-05-02",
+      "as_of": "2024-05-02T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK17",
+      "requested": "2024-05-03",
+      "as_of": "2024-05-03T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK18",
+      "requested": "2024-05-04",
+      "as_of": "2024-05-04T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK19",
+      "requested": "2024-05-05",
+      "as_of": "2024-05-05T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK20",
+      "requested": "2024-10-01",
+      "as_of": "2024-10-01T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-09-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK21",
+      "requested": "2024-10-02",
+      "as_of": "2024-10-02T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-09-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK22",
+      "requested": "2024-10-03",
+      "as_of": "2024-10-03T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-09-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK23",
+      "requested": "2024-10-04",
+      "as_of": "2024-10-04T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-09-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK24",
+      "requested": "2024-10-05",
+      "as_of": "2024-10-05T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-09-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK25",
+      "requested": "2024-10-06",
+      "as_of": "2024-10-06T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-09-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK26",
+      "requested": "2024-10-07",
+      "as_of": "2024-10-07T23:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-09-30",
+        "session_ended": true
+      }
+    },
+    {
+      "id": "MK27",
+      "requested": "2024-04-30",
+      "as_of": "2024-04-30T09:00:00+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": false
+      }
+    },
+    {
+      "id": "MK28",
+      "requested": "2024-04-30",
+      "as_of": "2024-04-30T12:00:00+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": false
+      }
+    },
+    {
+      "id": "MK29",
+      "requested": "2024-04-30",
+      "as_of": "2024-04-30T14:59:59+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": false
+      }
+    },
+    {
+      "id": "MK30",
+      "requested": "2024-04-30",
+      "as_of": "2024-04-30T15:01:00+08:00",
+      "expected": {
+        "trade_date": "2024-04-30",
+        "session_ended": true
+      }
+    }
+  ]
+}

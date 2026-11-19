@@ -1,0 +1,45 @@
+{
+  "version": "acceptance-v2-candidate",
+  "author": "Codex-assisted development",
+  "annotation_status": "pending_independent_review",
+  "clock": "2026-11-05T10:00:00+08:00",
+  "scope": "current 10 groups; action/domain routing; online statement fixtures; no local financial library",
+  "thresholds": {
+    "route_exact": 0.9,
+    "route_macro_f1": 0.85,
+    "route_fallback_rate_max": 0.05,
+    "chain_dialogue_success": 0.85,
+    "critical_violations_max": 0
+  },
+  "rubric_dimensions": [
+    "relevance",
+    "evidence_and_numbers",
+    "uncertainty_and_time",
+    "constraints_and_safety"
+  ],
+  "limitations": [
+    "Candidate authored during development; independent approval is not claimed.",
+    "Financial facts are synthetic; unavailable endpoints return explicit failures.",
+    "Research handoff is stubbed; report quality, future return accuracy, load testing and frontend rendering are outside scope.",
+    "Related dialogue turns remain together; splits are scenario-family disjoint, not company disjoint.",
+    "Existing development regressions and prompt-similar formulations are development-exposed, not a secret holdout.",
+    "v2 reuses development-exposed v1 cases; changes are not a comparable before/after accuracy experiment.",
+    "Route-only mode provides user history, not a fabricated task state. Chain mode projects actual active task state.",
+    "Retired document requests were replaced by online statement requests, with lineage recorded; no old score was recomputed.",
+    "Action labels are developer candidates with explicit alternatives; no independent review or action threshold claimed."
+  ],
+  "route_groups": [
+    "market",
+    "fundamentals",
+    "news",
+    "policy",
+    "sector",
+    "research",
+    "workspace",
+    "automation",
+    "memory",
+    "extensions"
+  ],
+  "parent_version": "acceptance-v1-candidate",
+  "action_metric": "action_accuracy allows only declared alternatives; fallback/missing fails; group thresholds unchanged"
+}

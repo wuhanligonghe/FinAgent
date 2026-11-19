@@ -1,0 +1,17 @@
+[Unit]
+Description=FinSight Qwen3-Reranker-8B local scorer
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Agent/FinAgent
+ExecStart=%h/Agent/FinAgent/.venv-reranker/bin/python -m finagent.reranker --model-path .finagent/models/Qwen3-Reranker-8B --port 11436 --quantization 4bit
+Environment=PYTHONUNBUFFERED=1
+Environment=OMP_NUM_THREADS=4
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+
+[Install]
+WantedBy=default.target

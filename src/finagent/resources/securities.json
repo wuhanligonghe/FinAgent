@@ -1,0 +1,12 @@
+[
+  {"symbol": "600519.SH", "name": "贵州茅台", "aliases": ["茅台"]},
+  {"symbol": "300750.SZ", "name": "宁德时代", "aliases": []},
+  {"symbol": "000333.SZ", "name": "美的集团", "aliases": ["美的"]},
+  {"symbol": "600690.SH", "name": "海尔智家", "aliases": []},
+  {"symbol": "000651.SZ", "name": "格力电器", "aliases": ["格力"]},
+  {"symbol": "002475.SZ", "name": "立讯精密", "aliases": []},
+  {"symbol": "601088.SH", "name": "中国神华", "aliases": ["神华"]},
+  {"symbol": "601012.SH", "name": "隆基绿能", "aliases": ["隆基"]},
+  {"symbol": "600031.SH", "name": "三一重工", "aliases": []},
+  {"symbol": "300124.SZ", "name": "汇川技术", "aliases": []}
+]

@@ -1,0 +1,16 @@
+[Unit]
+Description=FinSight private MySQL business storage
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Agent/FinAgent
+Environment=FINAGENT_MYSQLD=%h/yes/envs/hmdp-local/bin/mysqld
+ExecStart=%h/Agent/FinAgent/.venv/bin/python scripts/serve_runtime_mysql.py
+ExecStartPost=%h/Agent/FinAgent/.venv/bin/python scripts/check_runtime_mysql.py --wait 15
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=90
+UMask=0077
+
+[Install]
+WantedBy=default.target

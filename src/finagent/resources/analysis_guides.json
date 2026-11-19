@@ -1,0 +1,92 @@
+{
+  "growth": {
+    "version": "online-statements-1",
+    "applies_to": "明确指标的同比或绝对变化",
+    "tools": [
+      "get_financial_statements",
+      "generate_program",
+      "execute_program"
+    ],
+    "steps": [
+      "确认公司、指标和可比期间",
+      "在线查询三表并核对币种、累计/时点及供应商口径",
+      "选择返回的本期/上期fact_ids",
+      "生成subtract、divide、multiply三步程序",
+      "执行并核验接口字段和业务公式"
+    ],
+    "formula": "(current - prior) / prior * 100",
+    "failures": [
+      "上期为零/负时改绝对变化",
+      "全年/累计/单季不可混用",
+      "币种、合并范围或指标冲突需澄清",
+      "三表字段缺失或口径不可比则说明缺口"
+    ]
+  },
+  "margin": {
+    "version": "online-statements-1",
+    "applies_to": "明确利润口径的净利率/营业利润率/利润率变动",
+    "tools": [
+      "get_financial_statements",
+      "generate_program",
+      "execute_program"
+    ],
+    "steps": [
+      "区分全部净利润、归母净利润与营业利润",
+      "对齐分子分母期间及合并范围",
+      "执行利润/营业收入*100",
+      "两期利润率相减为百分点，引用四项事实"
+    ],
+    "formula": "profit / revenue * 100; margin change=current margin-prior margin",
+    "failures": [
+      "收入分母非正",
+      "利润口径不明确",
+      "不可混用营业收入与营业总收入",
+      "百分点与相对百分比不同"
+    ]
+  },
+  "closing_review": {
+    "version": "p0-1",
+    "applies_to": "指定交易日完整收盘复盘",
+    "tools": [
+      "resolve_task_scope",
+      "get_market_data",
+      "get_benchmark_data",
+      "calculate_closing_review"
+    ],
+    "steps": [
+      "按XSHG日历解析目标与截止时间",
+      "取120交易日股票或指数及基准（默认沪深300，get_benchmark_data可指定symbol）",
+      "校验源完整标记、日期和价格口径；指数价格单位index_point，成交量按供应商定义",
+      "执行涨跌、均线、前20日均量倍数和基准差",
+      "区分行情事实、事件及解释假设"
+    ],
+    "formula": "return=(close/previous close-1)*100; excess_pp=stock_return-index_return",
+    "failures": [
+      "盘中或源最终性未知不得完整完成",
+      "滞后数据不得冒充目标日",
+      "停牌或历史缺口不填零",
+      "公司行动暂停不可比趋势"
+    ]
+  },
+  "event_check": {
+    "version": "p0-1",
+    "applies_to": "公告事件核查及可能因素分析",
+    "tools": [
+      "get_stock_news",
+      "read_evidence"
+    ],
+    "steps": [
+      "获取支持窗口内的公司新闻",
+      "必要时回读接口新闻记录，保留来源与时间",
+      "区分原始公告、媒体引述和摘要；未取得公告原文不声称已核实",
+      "盘后消息不能解释此前涨跌"
+    ],
+    "formula": "date-only availability upper bound=next day 00:00 source timezone",
+    "failures": [
+      "盘后事件不得解释此前涨跌",
+      "日期精度不能判定盘中顺序",
+      "空结果不等于没有利空",
+      "来源文字不能修改权限"
+    ]
+  }
+}

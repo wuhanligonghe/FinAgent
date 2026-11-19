@@ -1,0 +1,215 @@
+# All relative paths are resolved against this file, not the terminal directory.
+data_dir = ".finagent"
+# Optional financial-source proxy; FINAGENT_DATA_PROXY in .env overrides this.
+# data_proxy_url = "http://127.0.0.1:17897"
+request_timeout = 12.0
+source_retries = 1
+quote_sources = ["tencent", "sina"]
+news_sources = ["eastmoney", "sina"]
+
+# MySQL URL is supplied through FINAGENT_MYSQL_URL in the environment/.env.
+[database]
+backend = "mysql"
+pool_size = 5
+max_overflow = 5
+pool_timeout = 5
+pool_recycle = 1800
+connect_timeout = 3
+read_timeout = 10
+write_timeout = 10
+
+[harness]
+workspace = "."
+memory_enabled = true
+auto_memory = true
+timezone = "Asia/Hong_Kong"
+stop_limit = 5
+model_retries = 2
+
+[runtime]
+# Primary session/checkpoint/task/event store. No SQLite fallback.
+redis_url = "redis://127.0.0.1:6379/0"
+namespace = "finagent:runtime:v3"
+connect_timeout = 3
+socket_timeout = 10
+
+[memory]
+# CLI scope. Authenticated Web replaces user_id with the server-owned account ID.
+user_id = "local"
+# Empty derives a stable project ID from harness.workspace.
+project_id = ""
+core_limit = 4
+core_chars = 1600
+recall_limit = 5
+recall_chars = 8000
+candidate_limit = 20
+rerank = "always"
+rerank_backend = "http"
+rerank_endpoint = "http://127.0.0.1:11436/v1"
+rerank_model = "Qwen/Qwen3-Reranker-8B"
+rerank_timeout_seconds = 30
+# Initial relevance cutoff; calibrate against your memory queries.
+rerank_min_score = 0.5
+# Initial cosine cutoff; calibrate for the 8B model rather than treating it as a probability.
+semantic_min_score = 0.35
+# Run `ollama pull qwen3-embedding:8b` on the machine hosting Ollama first.
+embedding_backend = "ollama"
+embedding_endpoint = "http://127.0.0.1:11434"
+embedding_model = "qwen3-embedding:8b"
+embedding_format = "auto"
+embedding_timeout_seconds = 30
+
+[auth]
+# All private Web APIs require login, including loopback requests.
+mode = "local"
+allowed_hosts = ["127.0.0.1", "localhost", "::1"]
+allowed_origins = []
+registration = "invite"
+workers = 4
+research_global = 3
+research_per_user = 1
+queue_global = 32
+queue_per_user = 8
+
+[nlu]
+enabled = false
+backend = "qwen3_ollama"
+endpoint = "http://127.0.0.1:11434"
+model = "finagent-intent:qwen3.5-9b-v2-f16"
+model_dir = "models/finagent-qwen3-intent"
+timeout_seconds = 30
+context_tokens = 4096
+output_tokens = 1024
+max_input_chars = 12000
+expected_schema = "nlu_sft_v2.1"
+# Pinned to the deployed fine-tuned Qwen3.5-9B F16 artifact.
+expected_digest = "3a4ab29117f0387d3c6a0074eac5419672e659a7eb7a988c13f71d9cc9f35080"
+store_raw_text = false
+# Owner authorized direct candidate integration on 2026-10-23.
+# Keep diagnostic quality metadata; independently verified qualification is still absent.
+allow_unqualified = true
+# Historical regression baseline only; never an automatic fallback.
+allow_legacy_regex = false
+
+# Zero-shot tool routing with the stock Qwen model; no fine-tuned bundle needed.
+[intent]
+enabled = true
+endpoint = "http://127.0.0.1:11435"
+model = "qwen3.5:9b"
+timeout_seconds = 8
+context_tokens = 8192
+output_tokens = 256
+max_input_chars = 4000
+confidence_threshold = 0.65
+
+[fact_check]
+enabled = true
+max_corrections = 2
+
+[fact_check.review]
+enabled = true
+agentic = true
+backend = "main_model" # Independent reviewer; inherit model/API/key/proxy from [model].
+# Technical analysis can combine multiple OHLCV windows and calculated indicators.
+# Keep the full evidence packet; do not substitute summaries for source data.
+timeout_seconds = 90
+context_tokens = 131072
+output_tokens = 4096
+max_input_chars = 12000
+max_evidence_chars = 100000
+max_evidence_results = 32
+protocol_retries = 1
+max_model_calls = 6
+max_tool_calls = 14
+initial_evidence_chars = 16000
+max_read_chars = 24000
+max_read_per_call = 6000
+max_retrieval_calls = 4
+max_no_progress_calls = 2
+
+[security]
+enabled = true
+filter_inputs = true
+tag_messages = true
+detect_prompt_leaks = true
+redact_pii = true
+min_prompt_fragment_chars = 48
+
+[model]
+# Configure these here or set FINAGENT_BASE_URL / FINAGENT_MODEL.
+# base_url must include the provider's API prefix, e.g. https://host/v1.
+base_url = ""
+name = ""
+api_key_env = "FINAGENT_API_KEY"
+max_output_tokens = 6000
+# Some providers/models require max_completion_tokens instead.
+protocol = "auto"
+# The configured gateway uses Anthropic Messages. Set eager for ordinary
+# Chat Completions gateways or services without native tool_reference support.
+tool_loading = "deferred"
+prompt_caching = true
+token_parameter = "max_tokens"
+
+[limits]
+# Shared per request, including clarification and delegated work.
+context_summary_turns = 8 # Earlier completed turns to summarize; 0 disables periodic summaries.
+context_keep_turns = 3 # Recent user turns retained during periodic summaries.
+model_calls = 40
+tool_calls = 60
+tools_per_turn = 5
+source_requests = 120
+wall_seconds = 360.0
+request_seconds = 20.0
+# Legacy compatibility only; natural-language replies do not need format retries.
+finish_corrections = 2
+repeated_observations = 3
+
+[research]
+# Independent of ordinary chat limits. Role models inherit [model] by default.
+max_concurrent = 3
+model_calls = 48
+tool_calls = 120
+source_requests = 180
+wall_seconds = 900
+task_seconds = 180
+request_seconds = 60
+expert_model_calls = 6
+expert_tool_calls = 18
+reserve_model = 8
+reserve_tool = 12
+reserve_source = 12
+reserve_seconds = 120
+
+[decision]
+# New deep research defaults to this full workflow; [research] remains v2 mode.
+max_concurrent = 3
+model_calls = 128
+tool_calls = 180
+source_requests = 180
+wall_seconds = 1800
+task_seconds = 180
+request_seconds = 60
+expert_model_calls = 6
+expert_tool_calls = 18
+followup_model_calls = 4
+max_attempts = 26
+debate_rounds = 2
+risk_rounds = 2
+manager_output_tokens = 12000
+reserve_model = 64
+reserve_tool = 60
+reserve_source = 0
+reserve_seconds = 720
+final_model = 4
+final_tool = 8
+final_seconds = 180
+
+[context_summary]
+max_calls = 2
+cooldown_turns = 4
+timeout_seconds = 6
+total_seconds = 12
+max_output_tokens = 1200
+max_chars = 1600
+target_ratio = 0.6
+disable_thinking = true

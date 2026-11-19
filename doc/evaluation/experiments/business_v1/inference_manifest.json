@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "experiment_id": "experiment_20261101_144322_987100",
+  "created_at": "2026-11-01T06:43:22.987112+00:00",
+  "mode": "live",
+  "split": "development",
+  "dataset_hash": "dd0591813c4beff805f82ac11f3aea81f4345e89cbe74a2900000a7eea634618",
+  "dataset_version": "business-benchmark-v1",
+  "dataset_validation": {
+    "dialogues": 48,
+    "turns": 69,
+    "splits": {
+      "development": 30,
+      "holdout": 18
+    },
+    "group_overlap": 0,
+    "entity_overlap": 0
+  },
+  "implementation_digest": "334e82081b362a0bbe308be066687d1aac929881606c34a64a8441988ce2733c",
+  "case_ids": [
+    "development_600519_lookup",
+    "development_600519_year_correction",
+    "development_600519_profit_clarification"
+  ],
+  "case_hashes": {
+    "development_600519_lookup": "5f715ba7e7e44ab42bbb87c882acf935aae972955c9e6d3bc86db0b7f4ac8539",
+    "development_600519_year_correction": "2e18312b31b3c8d2b0ebd617ee84d4496d6ad8fc9ba0dad842a929ebe444e149",
+    "development_600519_profit_clarification": "239e126c4a970849159718493c9822751d23d4f2a46bfb3d88339998952e4fde"
+  },
+  "review": {
+    "approved": 0,
+    "selected": 3,
+    "all_approved": false,
+    "file_hash": null,
+    "status": "pending_human_review"
+  },
+  "model": "deepseek-flash",
+  "provider_hash": "efdbb18afca7615955804478fde78bff5e7336dee41fa0844bc1d5f8ec527cbe",
+  "protocol": "auto",
+  "seed": 17,
+  "repeats": 1,
+  "arms": [
+    "direct",
+    "agent_no_task",
+    "agent_full"
+  ],
+  "jobs": [
+    {
+      "job_id": "development_600519_lookup_r0_direct",
+      "case_id": "development_600519_lookup",
+      "repeat": 0,
+      "arm": "direct"
+    },
+    {
+      "job_id": "development_600519_lookup_r0_agent_full",
+      "case_id": "development_600519_lookup",
+      "repeat": 0,
+      "arm": "agent_full"
+    },
+    {
+      "job_id": "development_600519_lookup_r0_agent_no_task",
+      "case_id": "development_600519_lookup",
+      "repeat": 0,
+      "arm": "agent_no_task"
+    },
+    {
+      "job_id": "development_600519_year_correction_r0_agent_full",
+      "case_id": "development_600519_year_correction",
+      "repeat": 0,
+      "arm": "agent_full"
+    },
+    {
+      "job_id": "development_600519_year_correction_r0_direct",
+      "case_id": "development_600519_year_correction",
+      "repeat": 0,
+      "arm": "direct"
+    },
+    {
+      "job_id": "development_600519_year_correction_r0_agent_no_task",
+      "case_id": "development_600519_year_correction",
+      "repeat": 0,
+      "arm": "agent_no_task"
+    },
+    {
+      "job_id": "development_600519_profit_clarification_r0_direct",
+      "case_id": "development_600519_profit_clarification",
+      "repeat": 0,
+      "arm": "direct"
+    },
+    {
+      "job_id": "development_600519_profit_clarification_r0_agent_no_task",
+      "case_id": "development_600519_profit_clarification",
+      "repeat": 0,
+      "arm": "agent_no_task"
+    },
+    {
+      "job_id": "development_600519_profit_clarification_r0_agent_full",
+      "case_id": "development_600519_profit_clarification",
+      "repeat": 0,
+      "arm": "agent_full"
+    }
+  ],
+  "retrieval_strategy": "keyword",
+  "max_model_calls": 60,
+  "soft_token_limit": 400000,
+  "clock": "2026-11-01T10:00:00+08:00",
+  "max_output_tokens": 2400,
+  "per_turn_model_calls": 8,
+  "per_turn_tool_calls": 14,
+  "request_timeout_seconds": 45,
+  "per_turn_wall_seconds": 150,
+  "real_research": "disabled",
+  "contract_hash": "9f173405dcd514e05eaf20fec63fef9dc8a0a0934295333a09cceb41e606d4ba",
+  "common_tools": [
+    "ask_user",
+    "execute_program",
+    "generate_program",
+    "get_company_disclosures",
+    "read_document",
+    "read_evidence",
+    "resolve_entity",
+    "resolve_task_scope",
+    "search_evidence"
+  ],
+  "ablation": "agent_no_task removes frame tools, frame prompt/context and frame enforcement; other Agent runtime unchanged",
+  "source_access": "direct receives inline original tables; both Agents retrieve the same original documents",
+  "statistics": "paired bootstrap on dialogue IDs, mean repeats within ID; task outcome requires all turns",
+  "preregistered_resume_gate": "complete 18-case human-reviewed holdout, >=3 repeats, 3 arms, no missing jobs",
+  "manifest_hash": "554b7ae3ad59ca514cb90dfa768aecfe83b7e6f18774e54217a8adb949720181"
+}

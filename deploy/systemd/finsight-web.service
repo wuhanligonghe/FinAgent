@@ -1,0 +1,17 @@
+[Unit]
+Description=FinSight authenticated Web workspace
+Requires=finsight-redis.service finsight-mysql.service
+Wants=finsight-reranker.service
+After=finsight-redis.service finsight-mysql.service finsight-reranker.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Agent/FinAgent
+ExecStart=%h/Agent/FinAgent/.venv/bin/python -m finagent.web --port 8000
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=30
+UMask=0077
+
+[Install]
+WantedBy=default.target

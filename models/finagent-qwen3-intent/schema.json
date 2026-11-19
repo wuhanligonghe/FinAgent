@@ -1,0 +1,156 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "nlu_sft_v2.1"
+    },
+    "task_type": {
+      "type": "string",
+      "enum": [
+        "stock_analysis",
+        "data_query",
+        "concept_qa",
+        "research_status",
+        "research_report",
+        "research_resume",
+        "other"
+      ]
+    },
+    "dialogue_act": {
+      "type": "string",
+      "enum": [
+        "new_request",
+        "follow_up",
+        "switch_entity",
+        "correct",
+        "clarification_answer",
+        "cancel",
+        "other"
+      ]
+    },
+    "entity_binding": {
+      "type": "string",
+      "enum": [
+        "explicit_single",
+        "explicit_multiple",
+        "reference",
+        "absent"
+      ]
+    },
+    "dimension_state": {
+      "type": "object",
+      "properties": {
+        "technical": {
+          "type": "string",
+          "enum": [
+            "include",
+            "exclude",
+            "unspecified"
+          ]
+        },
+        "sentiment": {
+          "type": "string",
+          "enum": [
+            "include",
+            "exclude",
+            "unspecified"
+          ]
+        },
+        "news": {
+          "type": "string",
+          "enum": [
+            "include",
+            "exclude",
+            "unspecified"
+          ]
+        },
+        "fundamentals": {
+          "type": "string",
+          "enum": [
+            "include",
+            "exclude",
+            "unspecified"
+          ]
+        },
+        "policy": {
+          "type": "string",
+          "enum": [
+            "include",
+            "exclude",
+            "unspecified"
+          ]
+        }
+      },
+      "required": [
+        "technical",
+        "sentiment",
+        "news",
+        "fundamentals",
+        "policy"
+      ],
+      "additionalProperties": false
+    },
+    "entities": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "COMPANY",
+              "STOCK_CODE",
+              "LOOKBACK_WINDOW",
+              "TIME_CUTOFF",
+              "REPORT_PERIOD",
+              "TRADE_DATE",
+              "DECISION_HORIZON",
+              "FINANCIAL_METRIC",
+              "COMPARISON_MODE",
+              "DISPLAY_UNIT"
+            ]
+          },
+          "role": {
+            "enum": [
+              "target",
+              "excluded",
+              "background",
+              null
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "type",
+          "role",
+          "text",
+          "start",
+          "end"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_type",
+    "dialogue_act",
+    "entity_binding",
+    "dimension_state",
+    "entities"
+  ],
+  "additionalProperties": false
+}

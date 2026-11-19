@@ -1,0 +1,12 @@
+{
+  "kind": "offline_reanalysis",
+  "source_experiment": "archived live_pilot (local runtime paths omitted)",
+  "manifest_hash": "554b7ae3ad59ca514cb90dfa768aecfe83b7e6f18774e54217a8adb949720181",
+  "inference_implementation_digest": "334e82081b362a0bbe308be066687d1aac929881606c34a64a8441988ce2733c",
+  "analysis_implementation_digest": "d5f6b6946363c19539a024ea01565f84788f913639cc11f5cdb48b33fbc78903",
+  "additional_model_calls": 0,
+  "real_research_launches": 0,
+  "scorer_revision": "financial-v1.1-structured-and-text-audit",
+  "posthoc_analysis": true,
+  "note": "保留原始推理记录和原报告；重新评分版本单独留痕，不追改推理前清单。"
+}

@@ -1,0 +1,758 @@
+[
+  {
+    "document_id": "doc_0f284ae84e83661690873193b7403bef9694347933b9e283c68491aa0c158266",
+    "symbol": "600519.SH",
+    "title": "合成贵州茅台2023年consolidated/annual报告",
+    "report_period": "2023-12-31",
+    "available_at": "2024-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/600519.SH_2023_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n营业收入 | 4390000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n净利润 | 570700000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 482900000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n营业利润 | 702400000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 834100000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n资产总计 | 11853000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n负债合计 | 5268000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2023年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_1bf7759fee2ab6fcacebed75453b4cd69280384a536449c515c0163ac0f7b0ed",
+    "symbol": "600519.SH",
+    "title": "合成贵州茅台2024年consolidated/annual报告",
+    "report_period": "2024-12-31",
+    "available_at": "2025-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/600519.SH_2024_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n营业收入 | 4520000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n净利润 | 587600000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 497200000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n营业利润 | 723200000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 858800000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n资产总计 | 12204000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n负债合计 | 5424000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_8b87a3d8ba525784b519467644a32a2d67a3085033c47c7284b9dd54e4d53476",
+    "symbol": "600519.SH",
+    "title": "合成贵州茅台2025年consolidated/annual报告",
+    "report_period": "2025-12-31",
+    "available_at": "2026-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/600519.SH_2025_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n营业收入 | 4650000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n净利润 | 604500000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 511500000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n营业利润 | 744000000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 883500000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n资产总计 | 12555000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n负债合计 | 5580000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2025年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_ef0dc4aadb25b7b66965f68524a55adb6e12c534515bc1f0a45de309a1414260",
+    "symbol": "300750.SZ",
+    "title": "合成宁德时代2024年consolidated/annual报告",
+    "report_period": "2024-12-31",
+    "available_at": "2025-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/300750.SZ_2024_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n营业收入 | 7800000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n净利润 | 1014000000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 858000000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n营业利润 | 1248000000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 1482000000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n资产总计 | 21060000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n负债合计 | 9360000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_f42b93e3a85740e1e5666484df59949daeee904fbf70f2e4f53084e6924c617b",
+    "symbol": "600519.SH",
+    "title": "合成贵州茅台2024年parent/annual报告",
+    "report_period": "2024-12-31",
+    "available_at": "2025-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/600519.SH_2024_parent_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n营业收入 | 2847600000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n净利润 | 370188000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n归属于母公司股东的净利润 | 313236000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n营业利润 | 455616000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n经营活动产生的现金流量净额 | 541044000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n资产总计 | 7688520000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n负债合计 | 3417120000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_7f27b00da224c19da112e26cca0bf8d317bbd405c325e9a494b12b4aded3b44c",
+    "symbol": "600519.SH",
+    "title": "合成贵州茅台2024年consolidated/quarter报告",
+    "report_period": "2024-09-30",
+    "available_at": "2024-10-31T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/600519.SH_2024_consolidated_quarter",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n营业收入 | 1084800000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n净利润 | 141024000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n归属于母公司股东的净利润 | 119328000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n营业利润 | 173568000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n经营活动产生的现金流量净额 | 206112000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n资产总计 | 12204000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n负债合计 | 5424000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_5c105ba82b4ecccc1a33fa09f23b14cc9b914dd8a50b21a167ffc6a1da00303e",
+    "symbol": "600519.SH",
+    "title": "合成贵州茅台2024年consolidated/ytd报告",
+    "report_period": "2024-09-30",
+    "available_at": "2024-10-31T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/600519.SH_2024_consolidated_ytd",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n营业收入 | 3254400000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n净利润 | 423072000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n归属于母公司股东的净利润 | 357984000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n营业利润 | 520704000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n经营活动产生的现金流量净额 | 618336000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n资产总计 | 12204000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n负债合计 | 5424000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_ad32fb67688eb79f1805e417e00e8c397e680f6ff32b323311a0130e220621d1",
+    "symbol": "300750.SZ",
+    "title": "合成宁德时代2023年consolidated/annual报告",
+    "report_period": "2023-12-31",
+    "available_at": "2024-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/300750.SZ_2023_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n营业收入 | 7670000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n净利润 | 997100000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 843700000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n营业利润 | 1227200000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 1457300000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n资产总计 | 20709000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n负债合计 | 9204000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2023年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_61a1bff1a523bddc89531af59f5aa3c08f94b7fabf6d3bf168d8cb5deb58991d",
+    "symbol": "300750.SZ",
+    "title": "合成宁德时代2025年consolidated/annual报告",
+    "report_period": "2025-12-31",
+    "available_at": "2026-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/300750.SZ_2025_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n营业收入 | 7930000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n净利润 | 1030900000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 872300000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n营业利润 | 1268800000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 1506700000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n资产总计 | 21411000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n负债合计 | 9516000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2025年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_dc0ba6e10ee8e1c0727a139cb97f09927a43a4f4ccc50b038d8f9156adb56388",
+    "symbol": "000651.SZ",
+    "title": "合成格力电器2024年consolidated/annual报告",
+    "report_period": "2024-12-31",
+    "available_at": "2025-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/000651.SZ_2024_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n营业收入 | 7780000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n净利润 | 1011400000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 855800000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n营业利润 | 1244800000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 1478200000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n资产总计 | 21006000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 全年 合并报表 人民币 元\n负债合计 | 9336000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_d697a26848320f47c8450414a5b5779648b92f16f49e92c6b02949797734d1fa",
+    "symbol": "300750.SZ",
+    "title": "合成宁德时代2024年parent/annual报告",
+    "report_period": "2024-12-31",
+    "available_at": "2025-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/300750.SZ_2024_parent_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n营业收入 | 4914000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n净利润 | 638820000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n归属于母公司股东的净利润 | 540540000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n营业利润 | 786240000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n经营活动产生的现金流量净额 | 933660000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n资产总计 | 13267800000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n负债合计 | 5896800000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_ef0187df9c65172986368c476729e8d631b071297ab69b3ba81de5c5de78541c",
+    "symbol": "300750.SZ",
+    "title": "合成宁德时代2024年consolidated/quarter报告",
+    "report_period": "2024-09-30",
+    "available_at": "2024-10-31T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/300750.SZ_2024_consolidated_quarter",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n营业收入 | 1872000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n净利润 | 243360000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n归属于母公司股东的净利润 | 205920000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n营业利润 | 299520000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n经营活动产生的现金流量净额 | 355680000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n资产总计 | 21060000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n负债合计 | 9360000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_d3731bf150522a3af2407fd62e4f0b15a49b25d3b443fa6c7eb84834e292abd8",
+    "symbol": "300750.SZ",
+    "title": "合成宁德时代2024年consolidated/ytd报告",
+    "report_period": "2024-09-30",
+    "available_at": "2024-10-31T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/300750.SZ_2024_consolidated_ytd",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n营业收入 | 5616000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n净利润 | 730080000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n归属于母公司股东的净利润 | 617760000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n营业利润 | 898560000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n经营活动产生的现金流量净额 | 1067040000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n资产总计 | 21060000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n负债合计 | 9360000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_7c42a5c66a7eaed137375ef7cd7e498defd34bc383c5b00e284a7d6bac594295",
+    "symbol": "000651.SZ",
+    "title": "合成格力电器2023年consolidated/annual报告",
+    "report_period": "2023-12-31",
+    "available_at": "2024-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/000651.SZ_2023_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n营业收入 | 7650000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n净利润 | 994500000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 841500000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n营业利润 | 1224000000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 1453500000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n资产总计 | 20655000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2023年 全年 合并报表 人民币 元\n负债合计 | 9180000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2023年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_85ac5a120f934538a5ffb7b05d3442df5c5227b24f2623b2393134726e4bfdb7",
+    "symbol": "000651.SZ",
+    "title": "合成格力电器2025年consolidated/annual报告",
+    "report_period": "2025-12-31",
+    "available_at": "2026-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/000651.SZ_2025_consolidated_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n营业收入 | 7910000000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n净利润 | 1028300000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n归属于母公司股东的净利润 | 870100000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n营业利润 | 1265600000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n经营活动产生的现金流量净额 | 1502900000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n资产总计 | 21357000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2025年 全年 合并报表 人民币 元\n负债合计 | 9492000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2025年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_a445957c6777c0805e948e0b731e02ebf8a45dc962c416af7ee9a3911befda05",
+    "symbol": "000651.SZ",
+    "title": "合成格力电器2024年parent/annual报告",
+    "report_period": "2024-12-31",
+    "available_at": "2025-05-01T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/000651.SZ_2024_parent_annual",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n营业收入 | 4901400000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n净利润 | 637182000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n归属于母公司股东的净利润 | 539154000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n营业利润 | 784224000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n经营活动产生的现金流量净额 | 931266000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n资产总计 | 13233780000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 全年 母公司报表 人民币 元\n负债合计 | 5881680000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_2186439cc5f352d21eb96e2d5a8a1f77fa16eadf0d3c9227574b240d02b55327",
+    "symbol": "000651.SZ",
+    "title": "合成格力电器2024年consolidated/quarter报告",
+    "report_period": "2024-09-30",
+    "available_at": "2024-10-31T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/000651.SZ_2024_consolidated_quarter",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n营业收入 | 1867200000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n净利润 | 242736000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n归属于母公司股东的净利润 | 205392000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n营业利润 | 298752000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n经营活动产生的现金流量净额 | 354768000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n资产总计 | 21006000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 第三季度 合并报表 人民币 元\n负债合计 | 9336000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  },
+  {
+    "document_id": "doc_8f3522d0b4ba7b48455c0de0ab5bbd4368807f7622e6538836f76b3f80e2228d",
+    "symbol": "000651.SZ",
+    "title": "合成格力电器2024年consolidated/ytd报告",
+    "report_period": "2024-09-30",
+    "available_at": "2024-10-31T00:00:00+08:00",
+    "source_url": "https://example.com/finagent-benchmark/000651.SZ_2024_consolidated_ytd",
+    "blocks": [
+      {
+        "locator": "table:1",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n营业收入 | 5601600000.00"
+      },
+      {
+        "locator": "table:2",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n净利润 | 728208000.00"
+      },
+      {
+        "locator": "table:3",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n归属于母公司股东的净利润 | 616176000.00"
+      },
+      {
+        "locator": "table:4",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n营业利润 | 896256000.00"
+      },
+      {
+        "locator": "table:5",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n经营活动产生的现金流量净额 | 1064304000.00"
+      },
+      {
+        "locator": "table:6",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n资产总计 | 21006000000.00"
+      },
+      {
+        "locator": "table:7",
+        "text": "项目 | 2024年 前三季度累计 合并报表 人民币 元\n负债合计 | 9336000000.00"
+      },
+      {
+        "locator": "table:8",
+        "text": "经营讨论 | 2024年\n营业收入、净利润、现金流数据的解释须回读对应报表，不能混用金额和增长率。 | 参见原文科目"
+      }
+    ]
+  }
+]
